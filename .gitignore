@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+
+node_modules/
+public/
+.deploy*/
+.idea/
+.vscode/
+
+_multiconfig.yml
+hexo-deploy-key
+hexo-deploy-key.pub
