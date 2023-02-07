@@ -6,18 +6,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    matrix:
+      os: [ ubuntu-latest ]
+      node_version: [ 18.x ]
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v1
         with:
           ref: hexo
+
       - name: Checkout theme repo
         uses: actions/checkout@v2
         with:
           repository: fluid-dev/hexo-theme-fluid
           ref: master
           path: themes/fluid
+
+      - name: Checkout deploy repo
+        uses: actions/checkout@v2
+        with:
+          repository: DengWuLi/DengWuLi.github.io
+          ref: master
+          path: .deploy_git
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
