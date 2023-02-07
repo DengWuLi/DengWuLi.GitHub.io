@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - HEXO
+      - hexo
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           version: ${{ matrix.node_version }}
-      - name: Setup HEXO
+      - name: Setup hexo
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_PRI }}
         run: |
