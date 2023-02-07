@@ -6,9 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    matrix:
-      os: [ ubuntu-latest ]
-      node_version: [ 18.x ]
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node_version: [ 18.x ]
 
     steps:
       - name: Checkout source
