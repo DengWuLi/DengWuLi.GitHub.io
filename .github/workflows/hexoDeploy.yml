@@ -20,8 +20,8 @@ jobs:
       - name: Checkout theme repo
         uses: actions/checkout@v2
         with:
-          repository: fluid-dev/hexo-theme-fluid
-          ref: master
+          repository: DengWuLi/DengWuLi.github.io
+          ref: theme
           path: themes/fluid
 
       - name: Checkout deploy repo

@@ -10,5 +10,4 @@ public/
 .vscode/
 
 _multiconfig.yml
-hexo-deploy-key
-hexo-deploy-key.pub
+key/
