@@ -252,11 +252,11 @@ web_analytics: # 网页访问统计
 
   # Google 统计的 Tracking ID
   # See: https://developers.google.com/analytics/devguides/collection/analyticsjs
-  google: G-161X1X1S3P
+  google: G-0T9Q1ZZLPQ
 
   # Google gtag.js 的媒体资源 ID
   # See: https://developers.google.com/analytics/devguides/collection/gtagjs/
-  gtag:
+  gtag: G-0T9Q1ZZLPQ
 
   # 腾讯统计的 H5 App ID，开启高级功能才有cid
   # Tencent analytics, set APP ID
