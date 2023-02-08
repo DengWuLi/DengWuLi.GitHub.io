@@ -721,7 +721,7 @@ post:
     enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-    type: utterances
+    type: giscus
 
 
 #---------------------------
@@ -856,10 +856,10 @@ cusdis:
 # Based on GitHub Discussions, similar to Utterances
 # See: https://giscus.app/
 giscus:
-  repo:
-  repo-id:
-  category:
-  category-id:
+  repo: DengWuLi/DengWuLi.github.io
+  repo-id: R_kgDOI68PHQ
+  category: Announcements
+  category-id: DIC_kwDOI68PHc4CUEL0
   theme-light: light
   theme-dark: dark
   mapping: pathname

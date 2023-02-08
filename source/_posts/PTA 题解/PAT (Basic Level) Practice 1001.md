@@ -9,7 +9,6 @@ tags:
 category:
   - PTA题解
 mermaid: true
-comment: 'utterances'
 ---
 
 # 害死人不偿命的(3n+1)猜想
@@ -85,6 +84,6 @@ public class Main {
 3. 重复这种操作, 直到 $n=1$, 这也启示我们直接在上述的逻辑判断外再加一层循环即可. 同时初始化一个用于记录循环进行次数的变量即可.
 4. 最后注意输入和输出格式即可.
 <p class="note note-info">
-<strong>2023-01-05</strong> <br>
+<strong>2023-01-15</strong> <br>
 IP属地: 曹县
 </p>
