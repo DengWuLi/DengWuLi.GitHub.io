@@ -233,7 +233,8 @@ custom_js:
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
-  - /css/iconfont/iconfont.css
+  # - /css/iconfont/iconfont.css
+  - /css/fluid-extension.css
 # 网页访问统计
 # Analysis of website visitors
 web_analytics: # 网页访问统计
@@ -641,11 +642,11 @@ post:
 
   # 版权声明，会显示在每篇文章的结尾
   copyright:
-    enable: false
+    enable: true
 
     # CreativeCommons license
     # Options: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND
-    license: 'BY'
+    license: 'BY-SA'
 
     # 显示作者
     author:
@@ -660,7 +661,7 @@ post:
     # 显示更新日期
     # Show update date
     update_date:
-      enable: false
+      enable: true
       format: "LL"
 
   # 文章底部上一篇下一篇功能

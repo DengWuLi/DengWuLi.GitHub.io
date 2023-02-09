@@ -274,7 +274,8 @@ for (int i = 0; i < str.length(); i++) {
 * 总的来说, 这道题不算太难, 许多繁琐的操作都有库函数的帮忙, 就是最后输出需要将规定的输出写入程序中, 比较烦人.
 ## 回想:
 现在看第一版C++代码, 感觉当时真是太辣鸡了, 这么简单的题竟然用了86行代码, 有时回来看看自己之前写过的题目还是有必要的.
-<p class="note note-info">
-<strong>2023-01-16</strong> <br>
-IP属地: 曹县
-</p>
+
+<pre class="note note-info">
+<strong>2023-01-18</strong> 
+<strong>IP属地: 曹县</strong>
+</pre>

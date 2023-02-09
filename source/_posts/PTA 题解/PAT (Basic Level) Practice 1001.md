@@ -83,7 +83,8 @@ public class Main {
 2. 如果为奇数, 即在上面的if语句下添加一个else即可, 把 $3n+1$ 砍掉一半, 即:`n = (3 * n + 1) / 2`;
 3. 重复这种操作, 直到 $n=1$, 这也启示我们直接在上述的逻辑判断外再加一层循环即可. 同时初始化一个用于记录循环进行次数的变量即可.
 4. 最后注意输入和输出格式即可.
-<p class="note note-info">
-<strong>2023-01-15</strong> <br>
-IP属地: 曹县
-</p>
+
+<pre class="note note-info">
+<strong>2023-01-18</strong> 
+<strong>IP属地: 曹县</strong>
+</pre>
