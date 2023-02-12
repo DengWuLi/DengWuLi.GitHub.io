@@ -24,9 +24,13 @@ mermaid: true
 ## 输出格式:
 输出从 $n$ 计算到 $1$ 需要的步数.
 ## 输入样例:
-> 3
+```txt
+3
+```
 ## 输出样例:
-> 5
+```txt
+5
+```
 
 ## C++
 ```cpp
@@ -85,6 +89,6 @@ public class Main {
 4. 最后注意输入和输出格式即可.
 
 <pre class="note note-info">
-<strong>2023-01-18</strong> 
+<strong>2023-01-15</strong> 
 <strong>IP属地: 曹县</strong>
 </pre>

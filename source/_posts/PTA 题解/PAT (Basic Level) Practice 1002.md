@@ -276,6 +276,6 @@ for (int i = 0; i < str.length(); i++) {
 现在看第一版C++代码, 感觉当时真是太辣鸡了, 这么简单的题竟然用了86行代码, 有时回来看看自己之前写过的题目还是有必要的.
 
 <pre class="note note-info">
-<strong>2023-01-18</strong> 
+<strong>2023-01-16</strong> 
 <strong>IP属地: 曹县</strong>
 </pre>
