@@ -44,19 +44,4 @@ var ogConfig = Object.assign({image: ogImage && url_for(ogImage)}, theme.open_gr
     <%- js_ex(theme.static_prefix.internal_js, 'utils.js') %>
     <%- js_ex(theme.static_prefix.internal_js, 'color-schema.js') %>
     <%- partial('_partials/plugins/analytics.ejs') %>
-
-    <%- inject_point('head') %>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T9Q1ZZLPQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-
-      gtag('config', 'G-0T9Q1ZZLPQ');
-    </script>
 </head>
