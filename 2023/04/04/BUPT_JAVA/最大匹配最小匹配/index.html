@@ -18,27 +18,26 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="素数对猜想题目描述:让我们定义 $d_{n}$ 为: $d_{n} &#x3D; p_{n+1} - p_{n}$, 其中 $p_{i}$ 是第 $i$ 个素数. 显然有 $d_{1} &#x3D; 1$, 且对于 $ n &gt; 1$ 有 $d_{n}$ 是个偶数. “素数对猜想” 认为 “存在无穷多对相邻且差为2的素数”.现给定任意正整数 N$(&lt;10^5)$, 请计算不超过N的满足猜">
+        <meta name="description" content="最大匹配最小匹配题目描述:正则表达式, 又称规则表达式. (英语: Regular expression, 在代码中常简写为 regex, regexp 或 RE), 是计算机科学的一个概念.正则表达式通常被用来检索, 替换那些符合某个模式 (规则) 的文本. 在正则表达式中通常有某个字符可以匹配若干个字符.假设在某程序设计语言的正则表达式中 * 就可以匹配 0 个或多个字符. 比如 a*b可以匹">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA: PAT (Basic Level) Practice 1007">
-<meta property="og:url" content="http://example.com/2023/02/14/PTA%20%E9%A2%98%E8%A7%A3/PAT%20(Basic%20Level)%20Practice%201007/index.html">
+<meta property="og:title" content="BUPT JAVA: 最大匹配最小匹配">
+<meta property="og:url" content="http://example.com/2023/04/04/BUPT_JAVA/%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E6%9C%80%E5%B0%8F%E5%8C%B9%E9%85%8D/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="素数对猜想题目描述:让我们定义 $d_{n}$ 为: $d_{n} &#x3D; p_{n+1} - p_{n}$, 其中 $p_{i}$ 是第 $i$ 个素数. 显然有 $d_{1} &#x3D; 1$, 且对于 $ n &gt; 1$ 有 $d_{n}$ 是个偶数. “素数对猜想” 认为 “存在无穷多对相邻且差为2的素数”.现给定任意正整数 N$(&lt;10^5)$, 请计算不超过N的满足猜">
+<meta property="og:description" content="最大匹配最小匹配题目描述:正则表达式, 又称规则表达式. (英语: Regular expression, 在代码中常简写为 regex, regexp 或 RE), 是计算机科学的一个概念.正则表达式通常被用来检索, 替换那些符合某个模式 (规则) 的文本. 在正则表达式中通常有某个字符可以匹配若干个字符.假设在某程序设计语言的正则表达式中 * 就可以匹配 0 个或多个字符. 比如 a*b可以匹">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/PTA.png">
-<meta property="article:published_time" content="2023-02-14T00:00:00.000Z">
+<meta property="og:image" content="http://example.com/img/BUPT.png">
+<meta property="article:published_time" content="2023-04-04T00:00:00.000Z">
 <meta property="article:modified_time" content="2023-04-04T05:43:48.496Z">
 <meta property="article:author" content="DengWuLi">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/PTA.png">
+<meta name="twitter:image" content="http://example.com/img/BUPT.png">
     
     
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>PTA: PAT (Basic Level) Practice 1007 - DengWuLi</title>
+    <title>BUPT JAVA: 最大匹配最小匹配 - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,13 +223,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/PTA-%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/Java.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PTA: PAT (Basic Level) Practice 1007</span>
+            <span id="subtitle">BUPT JAVA: 最大匹配最小匹配</span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-14 00:00" pubdate>
-          2023年2月14日 凌晨
+        <time datetime="2023-04-04 00:00" pubdate>
+          2023年4月4日 凌晨
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          1.7k 字
         
       </span>
     
@@ -301,35 +300,24 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">PTA: PAT (Basic Level) Practice 1007</h1>
+            <h1 style="display: none">BUPT JAVA: 最大匹配最小匹配</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="素数对猜想"><a href="#素数对猜想" class="headerlink" title="素数对猜想"></a>素数对猜想</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h2><p>让我们定义 $d_{n}$ 为: $d_{n} &#x3D; p_{n+1} - p_{n}$, 其中 $p_{i}$ 是第 $i$ 个素数. 显然有 $d_{1} &#x3D; 1$, 且对于 $ n &gt; 1$ 有 $d_{n}$ 是个偶数. “素数对猜想” 认为 “存在无穷多对相邻且差为2的素数”.<br>现给定任意正整数 <code>N</code>$(&lt;10^5)$, 请计算不超过<code>N</code>的满足猜想的素数对的个数.</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入在一行给出正整数<code>N</code>.</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>在一行中输出不超过<code>N</code>的满足猜想的素数对的个数.</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">20<br></code></pre></td></tr></table></figure>
+                <h1 id="最大匹配最小匹配"><a href="#最大匹配最小匹配" class="headerlink" title="最大匹配最小匹配"></a>最大匹配最小匹配</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h2><p>正则表达式, 又称规则表达式. (英语: Regular expression, 在代码中常简写为 regex, regexp 或 RE), 是计算机科学的一个概念.<br>正则表达式通常被用来检索, 替换那些符合某个模式 (规则) 的文本. 在正则表达式中通常有某个字符可以匹配若干个字符.<br>假设在某程序设计语言的正则表达式中 <code>*</code> 就可以匹配 0 个或多个字符. 比如 <code>a*b</code>可以匹配 <code>ab, acb, adb, acdb, adkfjgjdkb</code>等等.<br>在字符串 <code>acbddbeeebff</code> 中, 有多个字串可以和 <code>a*b</code> 匹配，包括 <code>acb, acbddb, acbddbeeeb</code>. 那么应该选哪个呢?<br>通常有两种策略可选, 一种是最小匹配, 就是选最短的 <code>acb</code>; 另一种是贪婪匹配, 就是选最长的 <code>acbddbeeeb</code>.<br>现在就请你写一段程序根据给定模式串和匹配串分别输出最小匹配和贪婪匹配的结果.</p>
+<p><code>提示: java 语言可以用 Matcher 和 Pattern 类</code></p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h2><p>为 2 行, 每行都是一个字符串, 字符串长度均大于 2 且小于 100. 第一行的字符串中包含且仅包含一个 <code>*</code>, 且这个 <code>*</code> 不会出现在字符串的开头, 为模式串.<br>也就是说这里的 <code>*</code> 可以匹配0个或多个任意字符. 第二行的字符串一定不包含 <code>*</code>, 为待匹配串.</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h2><p>也为 2 行, 每行都是一个字符串. 第一行为最小匹配的结果, 第二行为贪婪匹配的结果. 测试用例保证一定有解.<br><strong>特别注意: 样例中的最小匹配是 <code>aab</code> 而不是 <code>ab</code>, 这种规则意味着我们在待匹配串中从前向后找模式串时, 当模式串 <code>*</code> 号前边的内容一旦与待匹配串中某部分匹配, 就不会再在待匹配串中后边的部分查找是否还有与之匹配的情况. 或者说此时我们找到了最大匹配与最小匹配在待匹配串中的共同的起始位置.</strong></p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">a*b<br>haabaaaabcd<br></code></pre></td></tr></table></figure>
 
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br></code></pre></td></tr></table></figure>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">aab<br>aabaaaab<br></code></pre></td></tr></table></figure>
 
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">/* PTA 1007 素数对猜想</span><br><span class="hljs-comment"> * 2022/07/22</span><br><span class="hljs-comment"> * */</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">judge</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br>    <span class="hljs-type">int</span> b = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= <span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-built_in">sqrt</span>(n)) + <span class="hljs-number">1</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (n % i == <span class="hljs-number">0</span>) &#123;<br>            b = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">break</span>;<br>        &#125;   <span class="hljs-comment">// 如果n是合数则返回0.</span><br>        <span class="hljs-keyword">else</span><br>            b = <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> b;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> a;<br>    cin &gt;&gt; a;<br>    <span class="hljs-type">int</span>* p = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>[a + <span class="hljs-number">1</span>];<br>    p[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    p[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br>    p[<span class="hljs-number">2</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">3</span>; i &lt; a + <span class="hljs-number">1</span>; i++)<br>        p[i] = <span class="hljs-built_in">judge</span>(i);<br>    <span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= a - <span class="hljs-number">2</span>; i++)<br>        <span class="hljs-keyword">if</span> (p[i] == <span class="hljs-number">1</span> &amp;&amp; p[i + <span class="hljs-number">2</span>] == <span class="hljs-number">1</span>)<br>            count++;<br>    cout &lt;&lt; count;<br>    <span class="hljs-keyword">delete</span>[] p;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 2023/04/04</span><br><span class="hljs-comment">// 最大匹配最小匹配</span><br><span class="hljs-comment">// 这个题理解错题意了, 需要对 &quot;正则表达式&quot; 有深刻的理解</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">import</span> java.util.regex.Matcher;<br><span class="hljs-keyword">import</span> java.util.regex.Pattern;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">var</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">regex</span> <span class="hljs-operator">=</span> input.next(), str = input.next();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">head</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>, tail = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; regex.length(); i++)<br>            <span class="hljs-keyword">if</span> (regex.charAt(i) == <span class="hljs-string">&#x27;*&#x27;</span>) &#123;<br>                head = regex.substring(<span class="hljs-number">0</span>, i);<br>                <span class="hljs-keyword">if</span> (i + <span class="hljs-number">1</span> &lt;= regex.length())<br>                    tail = regex.substring(i + <span class="hljs-number">1</span>);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br><br>        <span class="hljs-comment">// 从网上查一查这种正则匹配串怎么写</span><br>        <span class="hljs-type">var</span> <span class="hljs-variable">minRegex</span> <span class="hljs-operator">=</span> head + <span class="hljs-string">&quot;.*?&quot;</span> + tail;<br>        <span class="hljs-type">var</span> <span class="hljs-variable">maxRegex</span> <span class="hljs-operator">=</span> head + <span class="hljs-string">&quot;.*&quot;</span> + tail;<br>        <span class="hljs-type">Pattern</span> <span class="hljs-variable">minPattern</span> <span class="hljs-operator">=</span> Pattern.compile(minRegex), maxPattern = Pattern.compile(maxRegex);<br>        <span class="hljs-type">Matcher</span> <span class="hljs-variable">minMatcher</span> <span class="hljs-operator">=</span> minPattern.matcher(str), maxMatcher = maxPattern.matcher(str);<br><br>        <span class="hljs-comment">// 不用通过循环来查找最短或最长的串, 只需输出匹配成功的第一个匹配串即可.</span><br>        minMatcher.find();<br>        System.out.println(minMatcher.group());<br><br>        maxMatcher.find();<br>        System.out.println(maxMatcher.group());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/// PAT (Basic Level) Practice</span><br><span class="hljs-comment">/// 1007 素数对猜想 20/20</span><br><span class="hljs-comment">/// 2023-02-14</span><br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> input.nextInt();<br>        ArrayList&lt;Integer&gt; prime = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; i &lt;= n; i++)<br>            <span class="hljs-keyword">if</span> (isPrime(i))<br>                prime.add(i);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; prime.size() - <span class="hljs-number">1</span>; i++)<br>            <span class="hljs-keyword">if</span> (prime.get(i) - prime.get(i + <span class="hljs-number">1</span>) == -<span class="hljs-number">2</span>)<br>                num++;<br>        System.out.println(num);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isPrime</span><span class="hljs-params">(<span class="hljs-type">int</span> number)</span> &#123;<br>        <span class="hljs-keyword">if</span> (number == <span class="hljs-number">1</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (number == <span class="hljs-number">2</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; i &lt;= Math.sqrt(number); i++)<br>            <span class="hljs-keyword">if</span> (number % i == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="简要解析"><a href="#简要解析" class="headerlink" title="简要解析:"></a>简要解析:</h2><p>这道题主要考察了 <strong>“素数”</strong> 这个概念和如何判断一个数是否为素数. 判断素数的算法多种多样, 我以后应该会专门写一篇blogs来总结一下常用的各种计算素数的算法.<br>结合本题的数据范围, 我们这里选择一种最为简便的方式进行判断:</p>
-<blockquote>
-<p>对于数字 $n$, 如果 $n$ 能被 $[2,\sqrt n)$ 范围内任意一个整数整除, 说明 $n$ 不是素数. 否则说明 $n$ 是素数. </p>
-</blockquote>
-<p>在本题中, 我首先计算出 $n$ 内 所有的素数, 并在数组 <code>p</code> 中进行标记, 之后开始遍历, 判断 <code>i</code> 和 <code>i+2</code> 是否均为素数, 并使用 <code>count</code> 进行计数. 最后输出 <code>count</code> 即可.</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后:"></a>写在最后:</h2><p>为什么 $\sqrt n$ 而不是 $n$, 这一点很容易看出. 因为, 一个整数的因数是成对的. 例如, 12可以分解为: </p>
-<blockquote>
-<p>$1 \times 12 \quad 2 \times 6 \quad 3 \times 4 \quad 4 \times 3 \quad 6 \times 2 \quad 12 \times 1$</p>
-</blockquote>
-<p>可以发现后半部分是前半部分的翻转.<br>如果6是12的因数, 就一定会有另外一个对应的因数2. 因为因数6大于根号12, 所以另一个因数2., 就一定小于根号12.<br>换句话说, 每一个大于根号n的因数, 都有一个对应的小于根号n的因数, 等于根号n的因数, 对应的另一个因数也是根号n, 比如 $5 \times 5 &#x3D; 25$.<br>因此, 只需要判断到 (包括) 根号n为止即可.</p>
 <pre class="note note-info">
-<strong>2023-02-14</strong> 
-<strong>IP属地: 曹县</strong>
+<strong>2023-04-04</strong> 
+<strong>IP属地: 北京</strong>
 </pre>
                 
               </div>
@@ -348,7 +336,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/PTA%E9%A2%98%E8%A7%A3/" class="category-chain-item">PTA题解</a>
+  <a href="/categories/BUPT-JAVA/" class="category-chain-item">BUPT_JAVA</a>
   
   
 
@@ -365,8 +353,6 @@
       
         <a href="/tags/Java/">#Java</a>
       
-        <a href="/tags/C/">#C++</a>
-      
     </div>
   
 </div>
@@ -377,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PTA: PAT (Basic Level) Practice 1007</div>
-      <div>http://example.com/2023/02/14/PTA 题解/PAT (Basic Level) Practice 1007/</div>
+      <div>BUPT JAVA: 最大匹配最小匹配</div>
+      <div>http://example.com/2023/04/04/BUPT_JAVA/最大匹配最小匹配/</div>
     </div>
     <div class="license-meta">
       
@@ -390,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月14日</div>
+          <div>2023年4月4日</div>
         </div>
       
       
