@@ -18,27 +18,26 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="A+B 和 C题目描述:给定区间 $[−2^{31}, 2^{31}]$ 内的 3 个整数 $A, B 和 C$, 请判断 $A + B$ 是否大于 $C$. 输入格式:输入第 1 行给出正整数 $T (T \leq 10)$, 是测试用例的个数. 随后给出 $T$ 组测试用例, 每组占一行, 顺序给出 $A, B 和 C$. 整数间以空格分隔. 输出格式:对每组测试用例, 在一行中输出 Case">
+        <meta name="description" content="学生类(异常)题目描述:在上次作业的学生类 (1047 学生类) 基础上:定义一个异常类 ScoreException, 当输入的学生成绩不在 $ [0, 100] $区间时, 抛出该异常.定义一个异常类 StudentNumberException, 当输入的学号不满足下述条件, 则抛出该异常. 条件为:学号为 10 位, 第 1 位为 2, 第2位为0, 其余位为数字 0~9.对 Studen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA: PAT (Basic Level) Practice 1011">
-<meta property="og:url" content="http://example.com/2023/02/25/PTA%20%E9%A2%98%E8%A7%A3/PAT%20(Basic%20Level)%20Practice%201011/index.html">
+<meta property="og:title" content="BUPT JAVA: 学生类(异常)">
+<meta property="og:url" content="http://example.com/2023/04/10/BUPT_JAVA/%E5%AD%A6%E7%94%9F%E7%B1%BB(%E5%BC%82%E5%B8%B8)/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="A+B 和 C题目描述:给定区间 $[−2^{31}, 2^{31}]$ 内的 3 个整数 $A, B 和 C$, 请判断 $A + B$ 是否大于 $C$. 输入格式:输入第 1 行给出正整数 $T (T \leq 10)$, 是测试用例的个数. 随后给出 $T$ 组测试用例, 每组占一行, 顺序给出 $A, B 和 C$. 整数间以空格分隔. 输出格式:对每组测试用例, 在一行中输出 Case">
+<meta property="og:description" content="学生类(异常)题目描述:在上次作业的学生类 (1047 学生类) 基础上:定义一个异常类 ScoreException, 当输入的学生成绩不在 $ [0, 100] $区间时, 抛出该异常.定义一个异常类 StudentNumberException, 当输入的学号不满足下述条件, 则抛出该异常. 条件为:学号为 10 位, 第 1 位为 2, 第2位为0, 其余位为数字 0~9.对 Studen">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/PTA.png">
-<meta property="article:published_time" content="2023-02-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-04-10T12:10:27.973Z">
+<meta property="og:image" content="http://example.com/img/BUPT.png">
+<meta property="article:published_time" content="2023-04-10T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-10T12:10:27.969Z">
 <meta property="article:author" content="DengWuLi">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/PTA.png">
+<meta name="twitter:image" content="http://example.com/img/BUPT.png">
     
     
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>PTA: PAT (Basic Level) Practice 1011 - DengWuLi</title>
+    <title>BUPT JAVA: 学生类(异常) - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,13 +223,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/PTA-%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/Java.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PTA: PAT (Basic Level) Practice 1011</span>
+            <span id="subtitle">BUPT JAVA: 学生类(异常)</span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-25 00:00" pubdate>
-          2023年2月25日 凌晨
+        <time datetime="2023-04-10 00:00" pubdate>
+          2023年4月10日 凌晨
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.6k 字
         
       </span>
     
@@ -301,24 +300,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">PTA: PAT (Basic Level) Practice 1011</h1>
+            <h1 style="display: none">BUPT JAVA: 学生类(异常)</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="A-B-和-C"><a href="#A-B-和-C" class="headerlink" title="A+B 和 C"></a>A+B 和 C</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h2><p>给定区间 $[−2^{31}, 2^{31}]$ 内的 3 个整数 $A, B 和 C$, 请判断 $A + B$ 是否大于 $C$.</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h2><p>输入第 1 行给出正整数 $T (T \leq 10)$, 是测试用例的个数. 随后给出 $T$ 组测试用例, 每组占一行, 顺序给出 $A, B 和 C$. 整数间以空格分隔.</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h2><p>对每组测试用例, 在一行中输出 <code>Case #X: true</code> 如果 $A + B &gt; C$, 否则输出 <code>Case #X: false</code>, 其中<code> X</code> 是测试用例的编号(从 1 开始).</p>
-<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs txt">4<br>1 2 3<br>2 3 4<br>2147483647 0 2147483646<br>0 -2147483648 -2147483647<br></code></pre></td></tr></table></figure>
+                <h1 id="学生类-异常"><a href="#学生类-异常" class="headerlink" title="学生类(异常)"></a>学生类(异常)</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述:"></a>题目描述:</h2><p>在上次作业的学生类 (1047 学生类) 基础上:<br>定义一个异常类 <code>ScoreException</code>, 当输入的学生成绩不在 $ [0, 100] $区间时, 抛出该异常.<br>定义一个异常类 <code>StudentNumberException</code>, 当输入的学号不满足下述条件, 则抛出该异常. 条件为:<br>学号为 10 位, 第 1 位为 <code>2</code>, 第2位为<code>0</code>, 其余位为数字 <code>0~9</code>.<br>对 <code>Student</code> 和 <code>StudentTest</code> 类进行必要修改, 提升程序的健壮性.</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h2><p>只有一行, 先是2个字符串, 依次代表 <code>number</code>, <code>name</code>, 然后是三个整数, 依次代表 <code>maths</code>, <code>english</code>, <code>science</code> 的成绩.</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h2><p>如果成绩非法, 则输出 <code>Illegal score format</code>: 如果学号非法则输出 <code>Illegal number format</code>.<br>如果正常, 则打印学生信息, 平均分保留一位小数. 具体格式见输出样例.</p>
+<h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">2011211301 Tom 88 79 90<br></code></pre></td></tr></table></figure>
 
-<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">Case #1: false<br>Case #2: true<br>Case #3: true<br>Case #4: false<br></code></pre></td></tr></table></figure>
+<h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs txt">Student ID:2011211301<br>Name:Tom<br>Math:88<br>English:79<br>Science:90<br>Average Score:85.7<br></code></pre></td></tr></table></figure>
 
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">/* PTA 1011 A+B 和 C</span><br><span class="hljs-comment"> * 2022/07/25</span><br><span class="hljs-comment"> * */</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> t;<br>    cin &gt;&gt; t;<br>    <span class="hljs-type">const</span> <span class="hljs-type">int</span> T = t;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> A[T], B[T], C[T];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; T; i++)<br>        cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; C[i];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; T; i++) <br>        <span class="hljs-keyword">if</span> ((A[i] + B[i]) &gt; C[i])<br>            cout &lt;&lt; <span class="hljs-string">&quot;Case #&quot;</span> &lt;&lt; i + <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">&quot;: true&quot;</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">else</span><br>            cout &lt;&lt; <span class="hljs-string">&quot;Case #&quot;</span> &lt;&lt; i + <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-string">&quot;: false&quot;</span> &lt;&lt; endl;<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 2023/04/10</span><br><span class="hljs-comment">// 学生类(异常)</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">var</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">number</span> <span class="hljs-operator">=</span> input.next(),<br>                name = input.next();<br>        <span class="hljs-type">int</span>[] grades = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">3</span>];<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++)<br>            grades[i] = input.nextInt();<br><br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-keyword">if</span> (!number.matches(<span class="hljs-string">&quot;20\\d&#123;8&#125;&quot;</span>))<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StudentNumberException</span>();<br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++)<br>                <span class="hljs-keyword">if</span> (grades[i] &lt; <span class="hljs-number">0</span> || grades[i] &gt; <span class="hljs-number">100</span>)<br>                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ScoreException</span>();<br>        &#125; <span class="hljs-keyword">catch</span> (ScoreException | StudentNumberException ignored) &#123;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        System.out.println(<span class="hljs-string">&quot;Student ID:&quot;</span> + number);<br>        System.out.println(<span class="hljs-string">&quot;Name:&quot;</span> + name);<br>        System.out.printf(<span class="hljs-string">&quot;Math:%d\nEnglish:%d\nScience:%d\nAverage Score:%.1f&quot;</span>, grades[<span class="hljs-number">0</span>], grades[<span class="hljs-number">1</span>], grades[<span class="hljs-number">2</span>], (grades[<span class="hljs-number">0</span>] + grades[<span class="hljs-number">1</span>] + grades[<span class="hljs-number">2</span>]) * <span class="hljs-number">1.0</span> / <span class="hljs-number">3</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ScoreException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Exception</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">ScoreException</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Illegal score format&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">StudentNumberException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Exception</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">StudentNumberException</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;Illegal number format&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/// 1011 A + B 和 C</span><br><span class="hljs-comment">/// 2023/01/06</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">t</span> <span class="hljs-operator">=</span> input.nextInt();<br>        <span class="hljs-type">long</span> a, b, c;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; t; i++) &#123;<br>            a = input.nextInt();<br>            b = input.nextInt();<br>            c = input.nextInt();<br>            <span class="hljs-keyword">if</span> (a + b &gt; c)<br>                System.out.printf(<span class="hljs-string">&quot;Case #%d: true\n&quot;</span>, i + <span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">else</span><br>                System.out.printf(<span class="hljs-string">&quot;Case #%d: false\n&quot;</span>, i + <span class="hljs-number">1</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="简要解析"><a href="#简要解析" class="headerlink" title="简要解析:"></a>简要解析:</h2><p>这道题真没什么难度, 在此不做过多讲解了.</p>
 <pre class="note note-info">
-<strong>2023-02-25</strong> 
+<strong>2023-04-10</strong> 
 <strong>IP属地: 北京</strong>
 </pre>
                 
@@ -338,7 +335,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/PTA%E9%A2%98%E8%A7%A3/" class="category-chain-item">PTA题解</a>
+  <a href="/categories/BUPT-JAVA/" class="category-chain-item">BUPT_JAVA</a>
   
   
 
@@ -355,8 +352,6 @@
       
         <a href="/tags/Java/">#Java</a>
       
-        <a href="/tags/C/">#C++</a>
-      
     </div>
   
 </div>
@@ -367,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PTA: PAT (Basic Level) Practice 1011</div>
-      <div>http://example.com/2023/02/25/PTA 题解/PAT (Basic Level) Practice 1011/</div>
+      <div>BUPT JAVA: 学生类(异常)</div>
+      <div>http://example.com/2023/04/10/BUPT_JAVA/学生类(异常)/</div>
     </div>
     <div class="license-meta">
       
@@ -380,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月25日</div>
+          <div>2023年4月10日</div>
         </div>
       
       
