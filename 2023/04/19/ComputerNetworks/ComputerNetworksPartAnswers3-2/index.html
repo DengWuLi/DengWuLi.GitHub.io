@@ -18,27 +18,26 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="害死人不偿命的(3n+1)猜想  题目描述: 卡拉兹(Callatz)猜想： 对任何一个正整数 nnn, 如果它是偶数, 那么把它砍掉一半; 如果它是奇数, 那么把 3n+13n+13n+1 砍掉一半.这样一直反复砍下去, 最后一定在某一步得到 n&#x3D;1n&#x3D;1n&#x3D;1, 卡拉兹在 1950 年的世界数学家大会上公布了这个猜想, 传说当时耶鲁大学师生齐动员, 拼命想证明这个貌似很傻很天真的命题, 结果">
+        <meta name="description" content="Computer Networks Part Answers 3 - 2  11. A channel has a bit rate of 4 kbps and a propagation delay of 20 msec.  For what range of frame sizes does stop-and-wait give an efficiency of at least $ 50">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA: PAT (Basic Level) Practice 1001">
-<meta property="og:url" content="https://dengwuli.github.io/2023/01/15/PTA%20%E9%A2%98%E8%A7%A3/PAT%20(Basic%20Level)%20Practice%201001/index.html">
+<meta property="og:title" content="Computer Networks Part Answers 3 - 2">
+<meta property="og:url" content="https://dengwuli.github.io/2023/04/19/ComputerNetworks/ComputerNetworksPartAnswers3-2/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="害死人不偿命的(3n+1)猜想  题目描述: 卡拉兹(Callatz)猜想： 对任何一个正整数 nnn, 如果它是偶数, 那么把它砍掉一半; 如果它是奇数, 那么把 3n+13n+13n+1 砍掉一半.这样一直反复砍下去, 最后一定在某一步得到 n&#x3D;1n&#x3D;1n&#x3D;1, 卡拉兹在 1950 年的世界数学家大会上公布了这个猜想, 传说当时耶鲁大学师生齐动员, 拼命想证明这个貌似很傻很天真的命题, 结果">
+<meta property="og:description" content="Computer Networks Part Answers 3 - 2  11. A channel has a bit rate of 4 kbps and a propagation delay of 20 msec.  For what range of frame sizes does stop-and-wait give an efficiency of at least $ 50">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dengwuli.github.io/img/PTA.png">
-<meta property="article:published_time" content="2023-01-15T00:00:00.000Z">
+<meta property="og:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
+<meta property="article:published_time" content="2023-04-19T00:00:00.000Z">
 <meta property="article:modified_time" content="2023-04-19T04:54:34.832Z">
 <meta property="article:author" content="DengWuLi">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="ComputerNetworks">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dengwuli.github.io/img/PTA.png">
+<meta name="twitter:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
     
     
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>PTA: PAT (Basic Level) Practice 1001 - DengWuLi</title>
+    <title>Computer Networks Part Answers 3 - 2 - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,13 +223,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/PTA-%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ComputerNetworksCover.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PTA: PAT (Basic Level) Practice 1001</span>
+            <span id="subtitle">Computer Networks Part Answers 3 - 2</span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-15 00:00" pubdate>
-          2023年1月15日 凌晨
+        <time datetime="2023-04-19 00:00" pubdate>
+          2023年4月19日 凌晨
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          4.1k 字
         
       </span>
     
@@ -301,40 +300,115 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">PTA: PAT (Basic Level) Practice 1001</h1>
+            <h1 style="display: none">Computer Networks Part Answers 3 - 2</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="害死人不偿命的3n1猜想"><a class="markdownIt-Anchor" href="#害死人不偿命的3n1猜想"></a> 害死人不偿命的(3n+1)猜想</h1>
-<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述:</h2>
-<p>卡拉兹(Callatz)猜想：</p>
-<p>对任何一个正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>, 如果它是偶数, 那么把它砍掉一半; 如果它是奇数, 那么把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3n+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 砍掉一半.这样一直反复砍下去, 最后一定在某一步得到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>, 卡拉兹在 1950 年的世界数学家大会上公布了这个猜想, 传说当时耶鲁大学师生齐动员, 拼命想证明这个貌似很傻很天真的命题, 结果闹得学生们无心学业, 一心只证 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3n+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>, 以至于有人说这是一个阴谋, 卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
-<p>我们今天的题目不是证明卡拉兹猜想, 而是对给定的任一不超过 1000 的正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>, 简单地数一下, 需要多少步 (砍几下) 才能得到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>?</p>
-<h2 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式:</h2>
-<p>每个测试输入包含 1 个测试用例，即给出正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的值.</p>
-<h2 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式:</h2>
-<p>输出从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 计算到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 需要的步数.</p>
-<h2 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例"></a> 输入样例:</h2>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">3<br></code></pre></td></tr></table></figure>
-<h2 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例"></a> 输出样例:</h2>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">5<br></code></pre></td></tr></table></figure>
-<h2 id="c"><a class="markdownIt-Anchor" href="#c"></a> C++</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">/// PTA 1001 害死人不偿命的(3n+1)猜想</span><br><span class="hljs-comment">/// 2022/07/17</span><br><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> N, i = <span class="hljs-number">0</span>;<br>    cin &gt;&gt; N;<br>    <span class="hljs-keyword">for</span> (; N != <span class="hljs-number">1</span>; i++) &#123;<br>        <span class="hljs-keyword">if</span> (N % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)<br>            N = N / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">else</span><br>            N = (<span class="hljs-number">3</span> * N + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br>    &#125;<br>    cout &lt;&lt; i;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="java"><a class="markdownIt-Anchor" href="#java"></a> Java</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/// PTA 1001 害死人不偿命的(3n+1)猜想</span><br><span class="hljs-comment">/// 2023/01/05</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">myscan</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> myscan.nextInt();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (n != <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)<br>                n /= <span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">else</span><br>                n = (<span class="hljs-number">3</span> * n + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br>            count++;<br>        &#125;<br>        System.out.println(count);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="简要解析"><a class="markdownIt-Anchor" href="#简要解析"></a> 简要解析:</h2>
-<p>本题作为 PAT (Basic Level) Practice 的开篇之题, 难度并不是很大, 只要读懂题意按照要求输出即可, 没有什么花花绕绕.</p>
-<p>首先读入一个整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>, 接着对这个整数进行如下操作:</p>
-<ol>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 是偶数, 即:<code>if(n%2 == 0)</code>或者简写为:<code>if(!N%2)</code>要注意, 这种简单写法只使用与C++, Java中并不适用, 因为Java中没有定义int类型与boolean类型的转换关系. 砍掉 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的一半, 即: <code>n /= 2</code>;</li>
-<li>如果为奇数, 即在上面的if语句下添加一个else即可, 把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3n+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 砍掉一半, 即:<code>n = (3 * n + 1) / 2</code>;</li>
-<li>重复这种操作, 直到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>, 这也启示我们直接在上述的逻辑判断外再加一层循环即可. 同时初始化一个用于记录循环进行次数的变量即可.</li>
-<li>最后注意输入和输出格式即可.</li>
-</ol>
+                <h1 id="computer-networks-part-answers-3-2"><a class="markdownIt-Anchor" href="#computer-networks-part-answers-3-2"></a> Computer Networks Part Answers 3 - 2</h1>
+<font face = "Times New Roman" size = 4>
+<b>11.</b> A channel has a bit rate of 4 kbps and a propagation delay of 20 msec. 
+For what range of frame sizes does stop-and-wait give an efficiency of at least $ 50 \% $?
+</font>
+由停等协议效率公式: $$ \eta = \frac{I}{ I + 2bR }$$
+其中 $ I $ 是帧长, $ b = 4kbps, R = 20ms  \eta = 50 \% \Longrightarrow I \geq 160bits $
+<br>
+<font face = "Times New Roman" size = 4>
+<b>12.</b> A 3000-km-long T1 trunk is used to transmit 64-byte frames using protocol 5. 
+If the propagation speed is 6 μsec/km, how many bits should the sequence numbers be?
+</font>
+<p>假定序号为 $ n $位, GobackN 协议的最大发送窗口 $ W = 2^n - 1 $<br />
+其信道利用率公式为:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>η</mi><mo>=</mo><mfrac><mi>W</mi><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mi>a</mi></mrow></mfrac><mspace width="1em"/><mi>a</mi><mo>=</mo><mfrac><mtext>传播时延</mtext><mtext>发送时延</mtext></mfrac><mspace width="1em"/><mi>η</mi><mo>=</mo><mn>100</mn><mspace linebreak="newline"></mspace></mrow><annotation encoding="application/x-tex">\eta = \frac{W}{1 + 2a} \quad a = \frac{传播时延}{发送时延} \quad \eta = 100 \\% 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.1296600000000003em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mord mathnormal">a</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">发</span><span class="mord cjk_fallback">送</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">播</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">η</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span><span class="mspace newline"></span></span></span></span></p>
+<p>$ 传播时延 = 3000 \times 6 = 18 ms, \; 发送时延 = 64 \times 8 \div 1.536M = 0.3ms \Longrightarrow a = 60 $<br />
+综上: $ W \geq 121 \Longrightarrow n \geq 7 $, 即至少要 7 位序号</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>13.</b> Consider the operation of protocol 6 over a 1-Mbps perfect (i.e., error-free) line. 
+The maximum frame size is 1000 bits. New packets are generated 1 second apart. The timeout interval is 10 msec. 
+If the special acknowledgement timer were eliminated, unnecessary timeouts would occur. 
+How many times would the average message be transmitted?
+</font>
+<p>发送一帧所需的时间是 1000/10M = 1ms，又因为每秒只有一帧要发送, 而重传间隔 10ms &lt; 1s, 且没有ACK 定时器, 即只采用捎带确认, 所以帧重传不可避免.</p>
+<p>假设 A 发送某一帧, B 收到后, 接收窗口滑动, 但因为没有要发送给 A 主机的帧, 则等待;<br />
+10ms 之后 A 主机重发该帧, B 收到后发现是重复帧发送 NAK;<br />
+A 收到 NAK 之后不再重发. 因此每一帧都发送两次.</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>14.</b> In protocol 6, $ MAX\_SEQ = 2^n − 1 $. 
+While this condition is obviously desirable to make efficient use of header bits, we have not demonstrated that it is essential. 
+Does the protocol work correctly for $ MAX\_SEQ = 4 $, for example?
+</font>
+<p><em>本题最好结合协议代码来理解, 以下解释为我本人所写, 不是标准答案</em><br />
+不能正常工作.<br />
+例如:<br />
+发送数据编号:<br />
+0 1 2 3 4 0 …<br />
+当发送窗口滑动到 [4 0] 时, 发送方发送编号为 4 的帧, 接受方收到后会将其存放在 arrived[0] 中.<br />
+而在接受窗口 [3 4] 时, arrived[1] 已经被标记为0, 由此 arrived数组全部为 true, 数据链路层就会上交网络层.<br />
+而此时上交的数据的顺序是不正确的, 会出错.</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>15.</b> When a file is transferred between two computers, two acknowledgement strategies are possible. 
+In the first one, the file is chopped up into packets, which are individually acknowledged by the receiver, but the file transfer as a whole is not acknowledged. 
+In the second one, the packets are not acknowledged individually, but the entire file is acknowledged when it arrives. 
+Discuss these two approaches.
+</font>
+<p>第一种机制中, 当某个分组的传输发生错误时, 可以只重发该分组, 而无需重发整个文件. 其优点是重传开销小, 但确认的开销相对第二种机制要大. 适合于网络可靠性能较差, 容易发生传输错误或丢失的情况.<br />
+第二种机制中,一旦某个分组发生错误, 则需要重传整个文件. 适合于网络传输故障率比较低的情况, 其优点是节省确认所消耗的网络资源.</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>16.</b> In some networks, the data link layer handles transmission errors by requesting that damaged frames be retransmitted. 
+If the probability of a frame' s being damaged is $ p $, what is the mean number of transmissions required to send a frame? 
+Assume that acknowledgements are never lost.
+</font>
+<p><em>无穷级数的计算, 大一下 (2021) 网课阶段没怎么学好</em><br />
+由题意可知, 发送一帧需要的平均传输次数为:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mi>i</mi><msup><mi>p</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>p</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum_{i = 1}^{\infty} ip^{i - 1}(1 - p) = \frac{1}{1 - p} 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">i</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.874664em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.20188em;vertical-align:-0.8804400000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">p</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804400000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<font face = "Times New Roman" size = 4>
+<b>17.</b> Frames of 1000 bits are sent over a 1-Mbps channel using a geostationary satellite whose propagation time from the earth is 270 msec.
+Acknowledgements are always piggybacked onto data frames. The headers are very short. Three-bit sequence numbers are used. 
+What is the maximum achievable channel utilization for <br>
+(a) Stop-and-wait? <br>
+(b) Protocol 5? <br>
+(c) Protocol 6? <br>
+</font>
+$$ 发送时延 = \frac{1000}{1M} = 1 ms \quad 传播时延 = 270 ms \quad a = \frac{传播时延}{发送时延} = 270 $$
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: gather at position 7: \begin{̲g̲a̲t̲h̲e̲r̲}̲
+  \eta_{停等协议} …'>\begin{gather}
+  \eta_{停等协议} = \frac{1}{2(1 + a)} = \frac{1}{542} = 0.18 \\% \\
+  \eta_{协议5} = \frac{2^3 - 1}{2(1 + a)} = \frac{7}{542} = 1.29 \\% \\
+  \eta_{协议6} = \frac{2^{3 - 1}}{2(1 + a)} = \frac{4}{542} = 0.74 \\%
+\end{gather}</p>
+<font face = "Times New Roman" size = 4>
+<b>18.</b> Consider an error-free 64-kbps satellite channel used to send 512-byte data frames in one direction, with very short acknowledgements coming back the other way. 
+What is the maximum throughput for window sizes of 1, 7, 15, and 127? 
+The earth-satellite propagation time is 270 msec.
+</font>
+<p>$ 发送时延 = 512 \times 8 \div 64k = 64 ms, 传播时延 = 270 ms, \Longrightarrow a = 4.2 $<br />
+设发送窗户大小为 $ W, 且当 \frac{W}{1 + 2a} \geq 1 \Longrightarrow W \geq 10 $ 时, 信道利用率最高.</p>
+<p>$ W = 1, 吞吐量 = \frac{1}{1 + 2a} \times 64k = 6.8kbps $</p>
+<p>$ W = 7, 吞吐量 = \frac{7}{1 + 2a} \times 64k = 47.7kbps $</p>
+<p>当 $ W = 15 \; OR \; 127 $ 时, 信道满负荷工作, 最大吞吐量 = $ 64kbps $</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>19.</b> A 100-km-long cable runs at the T1 data rate. The propagation speed in the cable is 2/3 the speed of light in vacuum. How many bits fit in the cable?
+</font>
+<p>由题意可知, 电缆的传播速度为 $ 20 \times 10^4 km/s $, 100 公里的电缆将在 0.5 毫秒内被填满, 所以需要: $ 1.544M \times 0.5 m = 772 bits$ 即可填满电缆.<br />
+<br></p>
+<font face = "Times New Roman" size = 4>
+<b>20.</b> Give at least one reason why PPP uses byte stuffing instead of bit stuffing to prevent accidental flag bytes within the payload from causing confusion.
+</font>
+<p>PPP 是由软件实现的, 而位填充几乎都是在硬件协议中实现的. 对于软件实现, 字节操作比位操作更简单.<br />
+此外, PPP是设计用于调制解调器的. 调制解调器接收和传送数据的单位是字符而不是位.</p>
+<p><strong>注: 从本篇 blogs 开始, hexo markdown 渲染器更换为 ‘hexo-renderer-markdown-it-plus’, 因为其对 LaxteX 语法有着更好的支持, 所以可能导致之前的一些 blgos 数学公式出现问题.</strong><br />
+<strong>同时, 我发现, 换用此 markdown 渲染器之后, 行间公式会发生重复渲染的情况, 目前 (2023-04-19) 还无法解决这个问题.</strong><br />
+<strong>还有, 目前本地渲染没有问题, 目前 (2023-04-19 14:47) 还未上传 GitHub, 不清楚 GitHub Actions 会不会有问题</strong></p>
 <pre class="note note-info">
-<strong>2023-01-15</strong> 
-<strong>IP属地: 曹县</strong>
+<strong>2023-04-19</strong> 
+<strong>IP属地: 北京</strong>
 </pre>
                 
               </div>
@@ -353,7 +427,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/PTA%E9%A2%98%E8%A7%A3/" class="category-chain-item">PTA题解</a>
+  <a href="/categories/AnswersShare/" class="category-chain-item">AnswersShare</a>
   
   
 
@@ -368,9 +442,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/">#Java</a>
-      
-        <a href="/tags/C/">#C++</a>
+        <a href="/tags/ComputerNetworks/">#ComputerNetworks</a>
       
     </div>
   
@@ -382,8 +454,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PTA: PAT (Basic Level) Practice 1001</div>
-      <div>https://dengwuli.github.io/2023/01/15/PTA 题解/PAT (Basic Level) Practice 1001/</div>
+      <div>Computer Networks Part Answers 3 - 2</div>
+      <div>https://dengwuli.github.io/2023/04/19/ComputerNetworks/ComputerNetworksPartAnswers3-2/</div>
     </div>
     <div class="license-meta">
       
@@ -395,7 +467,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月15日</div>
+          <div>2023年4月19日</div>
         </div>
       
       
@@ -534,19 +606,6 @@
 
 
 
-
-
-  <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
-    mermaid.initialize({"theme":"default"});
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('mermaid' in window) {
-        mermaid.init();
-      }
-    });
-  });
-</script>
 
 
 
