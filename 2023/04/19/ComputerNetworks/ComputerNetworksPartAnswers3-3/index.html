@@ -18,27 +18,26 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="继续(3n+1)猜想  题目描述: 卡拉兹(Callatz)猜想已经在1001中给出了描述. 在这个题目里. 情况稍微有些复杂. 当我们验证卡拉兹猜想的时候, 为了避免重复计算, 可以记录下递推过程中遇到的每一个数. 例如对 n&#x3D;3n&#x3D;3n&#x3D;3 进行验证的时候，我们需要计算3, 5, 8, 4, 2, 1, 则当我们对 n&#x3D;5,8,4,2n&#x3D;5,8,4,2n&#x3D;5,8,4,2 进行验证的时候, 就">
+        <meta name="description" content="Computer Networks Part Answers 3 - 3  21. What is the minimum overhead to send an IP packet using PPP? Count only the overhead introduced by PPP itself, not the IP header overhead. What is the maximu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PTA: PAT (Basic Level) Practice 1005">
-<meta property="og:url" content="https://dengwuli.github.io/2023/01/24/PTA%20%E9%A2%98%E8%A7%A3/PAT%20(Basic%20Level)%20Practice%201005/index.html">
+<meta property="og:title" content="Computer Networks Part Answers 3 - 3">
+<meta property="og:url" content="https://dengwuli.github.io/2023/04/19/ComputerNetworks/ComputerNetworksPartAnswers3-3/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="继续(3n+1)猜想  题目描述: 卡拉兹(Callatz)猜想已经在1001中给出了描述. 在这个题目里. 情况稍微有些复杂. 当我们验证卡拉兹猜想的时候, 为了避免重复计算, 可以记录下递推过程中遇到的每一个数. 例如对 n&#x3D;3n&#x3D;3n&#x3D;3 进行验证的时候，我们需要计算3, 5, 8, 4, 2, 1, 则当我们对 n&#x3D;5,8,4,2n&#x3D;5,8,4,2n&#x3D;5,8,4,2 进行验证的时候, 就">
+<meta property="og:description" content="Computer Networks Part Answers 3 - 3  21. What is the minimum overhead to send an IP packet using PPP? Count only the overhead introduced by PPP itself, not the IP header overhead. What is the maximu">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dengwuli.github.io/img/PTA.png">
-<meta property="article:published_time" content="2023-01-24T00:00:00.000Z">
+<meta property="og:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
+<meta property="article:published_time" content="2023-04-19T00:00:00.000Z">
 <meta property="article:modified_time" content="2023-04-23T02:31:30.985Z">
 <meta property="article:author" content="DengWuLi">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="ComputerNetworks">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dengwuli.github.io/img/PTA.png">
+<meta name="twitter:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
     
     
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>PTA: PAT (Basic Level) Practice 1005 - DengWuLi</title>
+    <title>Computer Networks Part Answers 3 - 3 - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -224,13 +223,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/PTA-%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/ComputerNetworksCover.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">PTA: PAT (Basic Level) Practice 1005</span>
+            <span id="subtitle">Computer Networks Part Answers 3 - 3</span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-01-24 00:00" pubdate>
-          2023年1月24日 凌晨
+        <time datetime="2023-04-19 00:00" pubdate>
+          2023年4月19日 凌晨
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.6k 字
         
       </span>
     
@@ -301,35 +300,108 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">PTA: PAT (Basic Level) Practice 1005</h1>
+            <h1 style="display: none">Computer Networks Part Answers 3 - 3</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="继续3n1猜想"><a class="markdownIt-Anchor" href="#继续3n1猜想"></a> 继续(3n+1)猜想</h1>
-<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述:</h2>
-<p>卡拉兹(Callatz)猜想已经在1001中给出了描述. 在这个题目里. 情况稍微有些复杂.</p>
-<p>当我们验证卡拉兹猜想的时候, 为了避免重复计算, 可以记录下递推过程中遇到的每一个数. 例如对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">n=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 进行验证的时候，我们需要计算3, 5, 8, 4, 2, 1, 则当我们对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>5</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>4</mn><mo separator="true">,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n=5,8,4,2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span></span></span></span> 进行验证的时候, 就可以直接判定卡拉兹猜想的真伪, 而不需要重复计算. 因为这 4 个数已经在验证 3 的时候遇到过了, 我们称 5, 8, 4, 2 是被 3 “覆盖” 的数. 我们称一个数列中的某个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为 “关键数”, 如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 不能被数列中的其他数字所覆盖.</p>
-<p>现在给定一系列待验证的数字, 我们只需要验证其中的几个关键数, 就可以不必再重复验证余下的数字. 你的任务就是找出这些关键数字, 并按从大到小的顺序输出它们.</p>
-<h2 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式:</h2>
-<p>每个测试输入包含 1 个测试用例, 第 1 行给出一个正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mo stretchy="false">(</mo><mi>K</mi><mo>&lt;</mo><mn>100</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">K(K&lt;100)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">)</span></span></span></span>, 第 2 行给出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> 个互不相同的待验证的正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo stretchy="false">(</mo><mn>1</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>100</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n(1 &lt; n \leq 100)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">)</span></span></span></span> 的值, 数字间用空格隔开.</p>
-<h2 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式:</h2>
-<p>每个测试用例的输出占一行, 按从大到小的顺序输出关键数字. 数字间用 1 个空格隔开, 但一行中最后一个数字后没有空格.</p>
-<h2 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例"></a> 输入样例:</h2>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">6<br>3 5 6 7 8 11<br></code></pre></td></tr></table></figure>
-<h2 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例"></a> 输出样例:</h2>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">7 6<br></code></pre></td></tr></table></figure>
-<h2 id="c"><a class="markdownIt-Anchor" href="#c"></a> C++</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> n;<br>    cin &gt;&gt; n;<br>    <span class="hljs-type">int</span> p[n];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>        cin &gt;&gt; p[i];<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>        <span class="hljs-keyword">if</span> (p[i] == <span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = p[i]; j != <span class="hljs-number">1</span>;) &#123;<br>                <span class="hljs-keyword">if</span> (j % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)<br>                    j /= <span class="hljs-number">2</span>;<br>                <span class="hljs-keyword">else</span><br>                    j = (<span class="hljs-number">3</span> * j + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; n; k++)<br>                    <span class="hljs-keyword">if</span> (p[k] == j)<br>                        p[k] = <span class="hljs-number">0</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">sort</span>(p, p + n, greater&lt;&gt;());<br>    <span class="hljs-type">int</span> m = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (; m &lt; n; m++)<br>        <span class="hljs-keyword">if</span> (p[m] == <span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">break</span>;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) &#123;<br>        cout &lt;&lt; p[i];<br>        <span class="hljs-keyword">if</span> (i != m - <span class="hljs-number">1</span>)<br>            cout &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="java"><a class="markdownIt-Anchor" href="#java"></a> Java</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/// PTA 1005 继续(3n+1)猜想</span><br><span class="hljs-comment">/// 2023/01/06</span><br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Collections;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> input.nextInt();<br>        <span class="hljs-comment">/* 要想使用Java中sort函数实现降序排列, 竟然要使用其对应的类, 比C++麻烦不少 */</span><br>        Integer[] p = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Integer</span>[n];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++)<br>            p[i] = input.nextInt();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">if</span> (p[i] != <span class="hljs-number">0</span>) &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> p[i]; j != <span class="hljs-number">1</span>; ) &#123;<br>                    <span class="hljs-keyword">if</span> (j % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)<br>                        j /= <span class="hljs-number">2</span>;<br>                    <span class="hljs-keyword">else</span><br>                        j = (<span class="hljs-number">3</span> * j + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br>                    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">k</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; k &lt; n; k++)<br>                        <span class="hljs-keyword">if</span> (p[k] == j)<br>                            p[k] = <span class="hljs-number">0</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        Arrays.sort(p, Collections.reverseOrder());<br>        <span class="hljs-type">int</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (; m &lt; n; m++)<br>            <span class="hljs-keyword">if</span> (p[m] == <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; m; i++) &#123;<br>            System.out.print(p[i]);<br>            <span class="hljs-keyword">if</span> (i != m - <span class="hljs-number">1</span>)<br>                System.out.print(<span class="hljs-string">&quot; &quot;</span>);<br>        &#125;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="简要解析"><a class="markdownIt-Anchor" href="#简要解析"></a> 简要解析:</h2>
-<p>这道题总体来说并不难, 下面说一下我的主要思路(两种语言思路一致, 这里我以C++为例子):</p>
-<p>首先, 读入n和相应的n个数. 接着, 对每个数进行 <strong>卡拉兹(Callatz)</strong> 猜想所描述的操作进行处理, 并将处理中出现的中间数且在输入的数中的那部分数赋值为零, 表示此数被<strong>覆盖</strong>了.</p>
-<p>对这n个数据进行降序排序, 最后对那些不为0的数据输出即可.</p>
+                <h1 id="computer-networks-part-answers-3-3"><a class="markdownIt-Anchor" href="#computer-networks-part-answers-3-3"></a> Computer Networks Part Answers 3 - 3</h1>
+<font face = "Times New Roman" size = 4>
+<b>21.</b> What is the minimum overhead to send an IP packet using PPP? Count only the overhead introduced by PPP itself, not the IP header overhead.
+What is the maximum overhead?
+</font>
+<p>最小开销: 每一帧有 2 个标志字节, 1 个协议字节和 2 个校验字节, 每帧总共 5 字节开销.<br />
+最大开销: 2 个标志字节, 1 个地址字节, 1 个控制字节, 2 个协议字节和 4 个校验字节, 一共 10 字节开销.<br />
+附 PPP 协议帧约定:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Flag (01111110)</th>
+<th style="text-align:center">Address (11111111)</th>
+<th style="text-align:center">Control (00000011)</th>
+<th style="text-align:center">Protocol</th>
+<th style="text-align:center">Payload</th>
+<th style="text-align:center">Checksun</th>
+<th style="text-align:center">Flag (01111110)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1 Byte</td>
+<td style="text-align:center">1 Byte</td>
+<td style="text-align:center">1 Byts</td>
+<td style="text-align:center">1 Byte OR 2 Bytes</td>
+<td style="text-align:center">Changeable</td>
+<td style="text-align:center">2 Bytes OR 4 Bytes</td>
+<td style="text-align:center">1 Byte</td>
+</tr>
+</tbody>
+</table>
+<p><strong>因为 <code>Address</code> 和 <code>Control</code> 字段总是取默认配置的常数, 因此 LCP 提供了某种必要的机制, 允许通信双方就是否省略这两个字段进行协商, 去掉的话可以为每帧节省 2 个字节的空间.</strong></p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>22.</b> 已知数据位流为 $ 1101 0110 $, 采用 CRC 校验, $ G(x) = x^3 + 1 $, 计算出校验位.
+</font>
+<p>非常简单, 答案: $ 111 $.</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>23.</b> 采用 3 比特序号的 SR 协议, 若接收窗口为 5, 则发送窗口的最大值是多少?
+</font>
+<p>使用 n 位序号的选择传协议的滑动窗口个数应满足:<br />
+$ W_T + W_R \leq 2^n $, 对于 3 位序号, $ W_T + W_R \leq 8 $, $ W_R = 5, W_T \leq 3 $</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>24.</b> $ 50kbps $ 的卫星信道, 往返时延为 $ 500 ms $, 帧长为 $ 1000 $ 位, 使用 SR 协议, 若使效率达到 $ 50 \% $, 序号的比特数至少是多少?
+</font>
+<p>因题目中没有强调使用忽略发送时间的 ACK 帧来确认, 假定为捎带确认.<br />
+$ a = \frac{传播时延}{发送时延} = \frac{250}{1000 \div 50} = 12.5 $<br />
+设发送窗口为 $ W $, 选择重传协议的信道利用率为 $ \frac{W}{2 + 2a} = 50 % $, 可求出 $ W = 14 $<br />
+$ W \leq 2^n - 1 \therefore n = 5 $</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>25.</b> 数据链路层采用 GBN 协议, 发送方已经发送了编号为 0-7 的帧, 当计时器超时时, 若发送方只收到 0, 4, 5 号帧的确认, 则发送方需要重发的帧数是多少?
+</font>
+<p>对 5 号帧的确认说明, 5 号帧及以前的帧全部正确接收, 因此发送方需要重发未确认的 6 号和 7 号帧, 即需要重发的帧数是 2.</p>
+<br>
+<font face = "Times New Roman" size = 4>
+<b>26.</b> 两台计算机的数据链路层协议实体采取滑动窗口机制. 利用 16kbps 的卫星信道传输长度为 128 字节的数据帧, 信道传播时延为270ms. <br>
+(1) 计算使用停等协议的信道利用率; <br>
+(2) 计算使用发送窗口为 7 的 GBN 协议的信道利用率; <br>
+(3) 计算使用发送窗口为 15 的 GBN 协议的信道利用率; <br>
+(4) 为使信道利用率达到最高,使 用 GBN 协议时序号的比特数最 少为多少位?
+</font>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>发送时延</mtext><mo>=</mo><mfrac><mrow><mn>128</mn><mo>×</mo><mn>8</mn></mrow><mrow><mn>16</mn><mi>k</mi></mrow></mfrac><mo>=</mo><mn>64</mn><mi>m</mi><mi>s</mi><mspace width="1em"/><mtext>传播时延</mtext><mo>=</mo><mn>270</mn><mi>m</mi><mi>s</mi><mspace width="1em"/><mi>a</mi><mo>=</mo><mfrac><mtext>传播时延</mtext><mtext>发送时延</mtext></mfrac><mo>=</mo><mn>4.2</mn><mspace width="1em"/><mn>2</mn><mo>+</mo><mn>2</mn><mi>a</mi><mo>=</mo><mn>10.4</mn></mrow><annotation encoding="application/x-tex">发送时延 = \frac{128 \times 8}{16k} = 64 ms \quad 传播时延 = 270 ms \quad a = \frac{传播时延}{发送时延} = 4.2 \quad 2 + 2a = 10.4 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord cjk_fallback">发</span><span class="mord cjk_fallback">送</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">6</span><span class="mord">4</span><span class="mord mathnormal">m</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:1em;"></span><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">播</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">7</span><span class="mord">0</span><span class="mord mathnormal">m</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.04633em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">发</span><span class="mord cjk_fallback">送</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">播</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">延</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mord">.</span><span class="mord">2</span><span class="mspace" style="margin-right:1em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">.</span><span class="mord">4</span></span></span></span></span></p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: gather at position 7: \begin{̲g̲a̲t̲h̲e̲r̲}̲
+  \eta_{停等协议} …'>\begin{gather}
+  \eta_{停等协议} = \frac{1}{2(1 + a)} = \frac{1}{10.4} \approx 9.6 \\% \\
+  \eta_{GBN7} = \frac{7}{2(1 + a)} = \frac{7}{10.4} \approx 67.3 \\% \\
+\end{gather}</p>
+<p>(3) 因为 15 &gt; 10.4, 因此信道利用率为 1<br />
+(4) $ W = 2^n - 1 \geq 10.4, \therefore n \geq 4 $</p>
+<font face = "Times New Roman" size = 4>
+<b>27.</b> 某数据链路层协议要传输下列 4 个字符数据: $ A: 01000111; B: 11100011; ESC: 11100000; FLAG: 01111110 $,
+写出下列成帧方法中实际传输的二进制序列: <br>
+(1) 字符计数法 <br>
+(2) 带首尾标志的字节填充法 <br>
+(3) 带首尾标志的比特填充法 <br>
+(4) RS-232 协议,每次发送一个 8 位字符, 以位 `0` 为起始位位 `1` 为终止位并计算上述每种方法的效率.
+</font>
+以下答案中, 红色字符为填充字符
+<p>(1)  $ \textcolor{red}{00000101} \quad 01000111 \quad 11100011 \quad 11100000 \quad 01111110 $<br />
+填充字符解释: 连同字符统计字符在内共 5 个字符, 所以填二进制的5<br />
+增加了一个长度字节, 效率为 4/5 = 80%</p>
+<p>(2) $ \textcolor{red}{01111110} \quad 01000111 \quad 11100011 \quad \textcolor{red}{11100000} \quad 11100000 \quad  \textcolor{red}{11100000}  \quad 01111110 \quad \textcolor{red}{01111110} $<br />
+增加了首尾标志和2个转义字符, 效率为 4/8 = 50%</p>
+<p>01111110 01000111 110100011 111000000 011111010 01111110<br />
+(3) $ \textcolor{red}{01111110} \quad 01000111 \quad 11\textcolor{blue}{0}10001 \quad 1111\textcolor{blue}{0}000 \quad 0011111\textcolor{blue}{0}1 \quad 0 \quad \textcolor{red}{01111110} $<br />
+增加了首尾标志和 3 位填充, 效率为 32/51 = 62.75%</p>
+<p>(4) RS232: 每个字符前面加 1 位起始位, 后面加 1 位停止位<br />
+$ \textcolor{red}{0}01000111\textcolor{red}{1} \quad \textcolor{red}{0}11100011\textcolor{red}{1} \quad \textcolor{red}{0}11100000\textcolor{red}{1} \quad \textcolor{red}{0}01111110\textcolor{red}{1} $<br />
+效率为 32/40 = 80%</p>
 <pre class="note note-info">
-<strong>2023-01-24</strong> 
-<strong>IP属地: 曹县</strong>
+<strong>2023-04-19</strong> 
+<strong>IP属地: 北京</strong>
 </pre>
                 
               </div>
@@ -348,7 +420,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/PTA%E9%A2%98%E8%A7%A3/" class="category-chain-item">PTA题解</a>
+  <a href="/categories/AnswersShare/" class="category-chain-item">AnswersShare</a>
   
   
 
@@ -363,9 +435,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java/">#Java</a>
-      
-        <a href="/tags/C/">#C++</a>
+        <a href="/tags/ComputerNetworks/">#ComputerNetworks</a>
       
     </div>
   
@@ -377,8 +447,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PTA: PAT (Basic Level) Practice 1005</div>
-      <div>https://dengwuli.github.io/2023/01/24/PTA 题解/PAT (Basic Level) Practice 1005/</div>
+      <div>Computer Networks Part Answers 3 - 3</div>
+      <div>https://dengwuli.github.io/2023/04/19/ComputerNetworks/ComputerNetworksPartAnswers3-3/</div>
     </div>
     <div class="license-meta">
       
@@ -390,7 +460,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年1月24日</div>
+          <div>2023年4月19日</div>
         </div>
       
       
@@ -529,19 +599,6 @@
 
 
 
-
-
-  <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
-    mermaid.initialize({"theme":"default"});
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('mermaid' in window) {
-        mermaid.init();
-      }
-    });
-  });
-</script>
 
 
 

@@ -1,0 +1,837 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/index.svg">
+    <link rel="icon" href="/img/index.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <meta name="theme-color" content="#2f4154">
+    <meta name="author" content="DengWuLi">
+    <meta name="keywords" content="">
+    
+        <meta name="description" content="手撕STL Sort  题目描述: C++ STL是 Standard Template Library 的简称, 即标准模板库. 简单来说, STL 将常用的数据结构与算法进行了封装, 用户需要时可以直接调用, 不用重新开发. 排序算法 sort() 是 STL 包含的一个重要算法. STL 中的 sort() 函数基于快速排序算法实现, 众所众知, 快速排序是目前已知平均情况下最快的排序算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JLU数据结构课设 - 手撕STL Sort">
+<meta property="og:url" content="https://dengwuli.github.io/2023/04/23/%E5%85%B6%E4%BB%96/JLU%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%20-%20%E6%89%8B%E6%92%95STL-Sort/index.html">
+<meta property="og:site_name" content="DengWuLi">
+<meta property="og:description" content="手撕STL Sort  题目描述: C++ STL是 Standard Template Library 的简称, 即标准模板库. 简单来说, STL 将常用的数据结构与算法进行了封装, 用户需要时可以直接调用, 不用重新开发. 排序算法 sort() 是 STL 包含的一个重要算法. STL 中的 sort() 函数基于快速排序算法实现, 众所众知, 快速排序是目前已知平均情况下最快的排序算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dengwuli.github.io/img/JLU.jpeg">
+<meta property="article:published_time" content="2023-04-23T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-23T02:31:30.989Z">
+<meta property="article:author" content="DengWuLi">
+<meta property="article:tag" content="C++">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dengwuli.github.io/img/JLU.jpeg">
+    
+    
+        <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    
+    <title>JLU数据结构课设 - 手撕STL Sort - DengWuLi</title>
+
+    <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+    <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"dengwuli.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-0T9Q1ZZLPQ","gtag":"G-0T9Q1ZZLPQ","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"measurement":"G-0T9Q1ZZLPQ"},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+    <script  src="/js/utils.js" ></script>
+    <script  src="/js/color-schema.js" ></script>
+    
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DengWuLi</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>全部文章</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/PTA%E9%A2%98%E8%A7%A3">
+                    <i class="iconfont icon-books"></i>
+                    <span>PTA题解</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/PTA-%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">JLU数据结构课设 - 手撕STL Sort</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-04-23 00:00" pubdate>
+          2023年4月23日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.1k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">JLU数据结构课设 - 手撕STL Sort</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="手撕stl-sort"><a class="markdownIt-Anchor" href="#手撕stl-sort"></a> 手撕STL Sort</h1>
+<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述:</h2>
+<p>C++ STL是 <em>Standard Template Library</em> 的简称, 即标准模板库. 简单来说, STL 将常用的数据结构与算法进行了封装, 用户需要时可以直接调用, 不用重新开发. 排序算法 sort() 是 STL 包含的一个重要算法.</p>
+<p>STL 中的 sort() 函数基于快速排序算法实现, 众所众知, 快速排序是目前已知平均情况下最快的排序算法, 被 IEEE 评选为 20 世纪十大算法之一, 但其最坏情况下时间复杂度会退化为 $ O(n^2) $. STL 中的 sort() 对传统快速排序做了巧妙的改进, 使其最坏情况下时间复杂度也能维持在 $ O(nlogn) $, 它是如何实现的呢？</p>
+<p>快速排序算法最坏情况下时间复杂度退化为 $ O(n^2) $ 的主要原因是, 每次划分 (Partition) 操作时, 都分在子数组的最边上, 导致递归深度恶化为 $ O(n) $层. 而 STL 的 sort() 在 Partition 操作有恶化倾向时, 能够自我侦测, 转而改为堆排序, 使效率维持在堆排序的 $ O(nlogn) $. 其具体方法是: 侦测快速排序的递归深度, 当递归深度达到 $ \lfloor 2 \log_2n \rfloor = O(logn) $ 层时, 强行停止递归, 转而对当前处理的子数组进行堆排序.</p>
+<p>此外, 传统的快速排序在数据量很小时, 为极小的子数组产生许多的递归调用, 得不偿失. 为此, STL 的 sort() 进行了优化, 在小数据量的情况下改用插入排序. 具体做法是: 当递归处理的子数组长度 (子数组包含的元素个数) 小于等于某个阈值 <code>threshold</code> 时, 停止处理并退出本层递归, 使当前子数组停留在 “接近排序但尚未完成” 的状态, 最后待所有递归都退出后, 再对整个序列进行一次插入排序 (注意不是对当前处理的子数组进行插入排序, 而是在快速排序的所有递归完全退出后, 对整个数组统一进行一次插入排序). 实验表明, 此种策略有着良好的效率, 因为插入排序在面对 “接近有序” 的序列时拥有良好的性能.</p>
+<p>在本题中, 请你按照上述思路, 自己实现 STL 的 sort() 函数.</p>
+<p><strong>备注: Partition 操作选取第 1 个元素作为基准元素. Partition 操作的不同实现可能导致不同的输出结果, 为保证输出结果唯一, 该操作的实现请以教材为准</strong></p>
+<h2 id="函数接口定义"><a class="markdownIt-Anchor" href="#函数接口定义"></a> 函数接口定义:</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-type">int</span> *R, <span class="hljs-type">int</span> n)</span></span>;<br></code></pre></td></tr></table></figure>
+<p>功能为对整数 <code>R[1]</code>…<code>R[n]</code> 递增排序.</p>
+<h2 id="裁判测试程序样例"><a class="markdownIt-Anchor" href="#裁判测试程序样例"></a> 裁判测试程序样例:</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdlib.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;math.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> threshold;<br><br><span class="hljs-comment">/* 请在这里补充你的代码，即你所实现的sort函数 */</span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> n,i;<br>    <span class="hljs-type">int</span> a[<span class="hljs-number">50010</span>];<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d %d&quot;</span>, &amp;n, &amp;threshold);<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;a[i]);<br>    <br>    <span class="hljs-built_in">sort</span>(a,n);<br>    <br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Final:&quot;</span>);<br>    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>,a[i]);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>备注: 提交代码时, 只需提交 <code>sort</code> 函数以及你自定义的其他函数, 不用提交 <code>#include</code> 或者 <code>main</code> 函数等内容.</strong></p>
+<h2 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式:</h2>
+<p>输入第一行为 2 个正整数 <code>n</code> 和 <code>threshold</code>, n 为待排序的元素个数, 不超过50000, threshold 为改用插入排序的阈值, 不超过 20, 含义如上所述. 第二行为 n 个空格间隔的整数. 本题中读入数据的操作无需你来实现, 而由框架程序完成.</p>
+<h2 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式:</h2>
+<p>输出第一行为以 <code>depth_limit:</code> 开头的整数, 表示转为堆排序的递归深度, 即 $ \lfloor 2log_2n \rfloor $ 从第二行开始, 输出对某子数组转为堆排序后, 该子数组初始建堆的结果, 每个元素后一个空格, 每个堆占一行, 以<code>Heap:</code>开头. 注意, 可能不止一个堆. 接下来下一行, 输出 n 个整数, 每个整数后一个空格, 为快速排序所有递归退出后, 插入排序执行前的数组元素, 以<code>Intermediate:</code>开头. 最后一行为 n 整数, 每个整数后一个空格, 表示排序后的数组, 以 <code>Final:</code> 开头 (最后一行由框架程序完成, 无需你来输出)</p>
+<h2 id="输入输出样例"><a class="markdownIt-Anchor" href="#输入输出样例"></a> 输入输出样例:</h2>
+<h3 id="输入样例-1"><a class="markdownIt-Anchor" href="#输入样例-1"></a> 输入样例 1:</h3>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">10 2<br>10 9 8 7 6 5 4 3 2 1<br></code></pre></td></tr></table></figure>
+<h3 id="输出样例-1"><a class="markdownIt-Anchor" href="#输出样例-1"></a> 输出样例 1:</h3>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">depth_limit:6<br>Heap:7 6 5 4 <br>Intermediate:1 2 3 4 5 6 7 8 9 10 <br>Final:1 2 3 4 5 6 7 8 9 10 <br></code></pre></td></tr></table></figure>
+<h3 id="输入样例-2"><a class="markdownIt-Anchor" href="#输入样例-2"></a> 输入样例 2:</h3>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">60 2<br>66 61 92 22 50 80 39 2 25 60 49 17 37 19 24 57 40 82 11 52 45 0 33 78 32 25 19 42 92 50 39 87 74 87 56 79 63 63 80 83 50 3 87 2 91 77 87 10 59 23 25 6 49 85 9 95 60 16 28 1 <br></code></pre></td></tr></table></figure>
+<h3 id="输出样例-2"><a class="markdownIt-Anchor" href="#输出样例-2"></a> 输出样例 2:</h3>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">depth_limit:11<br>Heap:24 19 23 19 17 22 <br>Intermediate:1 0 2 2 3 6 10 9 11 16 17 19 19 22 23 24 25 25 25 28 32 33 37 39 39 42 40 45 49 49 50 50 50 52 56 57 59 60 60 61 63 63 66 77 74 78 79 80 80 82 83 85 87 87 87 87 91 92 92 95 <br>Final:0 1 2 2 3 6 9 10 11 16 17 19 19 22 23 24 25 25 25 28 32 33 37 39 39 40 42 45 49 49 50 50 50 52 56 57 59 60 60 61 63 63 66 74 77 78 79 80 80 82 83 85 87 87 87 87 91 92 92 95 <br></code></pre></td></tr></table></figure>
+<h2 id="c"><a class="markdownIt-Anchor" href="#c"></a> C++</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// 2023/04/23</span><br><span class="hljs-comment">// 手撕STL Soer</span><br><span class="hljs-comment">// 应 Mar-Bro 要求写的</span><br><br><span class="hljs-comment">// 维护堆的性质</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">heapify</span><span class="hljs-params">(<span class="hljs-type">int</span> arr[], <span class="hljs-type">const</span> <span class="hljs-type">int</span>&amp; len, <span class="hljs-type">int</span> pos)</span> </span>&#123;<br>    <span class="hljs-type">int</span> largest = pos,<br>        left = <span class="hljs-number">2</span> * pos + <span class="hljs-number">1</span>,<br>        right = <span class="hljs-number">2</span> * pos + <span class="hljs-number">2</span>;<br><br>    <span class="hljs-comment">// 找出父节点, 左孩子, 右孩子中最大节点的下标</span><br>    <span class="hljs-keyword">if</span> (left &lt; len &amp;&amp; arr[largest] &lt; arr[left])<br>        largest = left;<br>    <span class="hljs-keyword">if</span> (right &lt; len &amp;&amp; arr[largest] &lt; arr[right])<br>        largest = right;<br><br>    <span class="hljs-keyword">if</span> (largest != pos) &#123;<br>        <span class="hljs-built_in">swap</span>(arr[largest], arr[pos]);<br>        <span class="hljs-built_in">heapify</span>(arr, len, largest);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">heapSort</span><span class="hljs-params">(<span class="hljs-type">int</span>* first, <span class="hljs-type">const</span> <span class="hljs-type">int</span>* last)</span> </span>&#123;<br>    <span class="hljs-keyword">auto</span> len = last - first;<br>    <span class="hljs-comment">// 建堆</span><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = len / <span class="hljs-number">2</span> - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)<br>        <span class="hljs-built_in">heapify</span>(first, len, i);<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Heap:&quot;</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> i = first; i &lt; last; i++)<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>, *i);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);<br>    <span class="hljs-comment">// 排序</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = len - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i--) &#123;<br>        <span class="hljs-built_in">swap</span>(first[i], first[<span class="hljs-number">0</span>]);<br>        <span class="hljs-built_in">heapify</span>(first, i, <span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 用于 introSort 的分割函数, 返回, pivot 所在的指针</span><br><span class="hljs-function"><span class="hljs-type">int</span>* <span class="hljs-title">partition</span><span class="hljs-params">(<span class="hljs-type">int</span>* first, <span class="hljs-type">int</span>* last)</span> </span>&#123;<br>    <span class="hljs-type">int</span> pivot = *first;   <span class="hljs-comment">// 默认是以第一个作为枢轴量</span><br>    <span class="hljs-keyword">auto</span> p = first;<br>    <span class="hljs-comment">// 这一段循环基本必须照着这个格式写, 不然不能 AC</span><br>    <span class="hljs-comment">// 因为分组的实现方式有很多, 但是要想 AC 许多细节的地方需要注意</span><br>    <span class="hljs-comment">// 这种实现方式选择的是, 一开始 first 并不参与排序, 直到返回时, 才将 first 对应的值进行交换</span><br>    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>        <span class="hljs-keyword">while</span> (*(++first) &lt;= pivot) <span class="hljs-comment">// 少一个等号都不行!</span><br>            ;<br>        <span class="hljs-keyword">while</span> (*(--last) &gt; pivot)<br>            ;<br>        <span class="hljs-keyword">if</span> (first &gt;= last) &#123;<br>            <span class="hljs-built_in">swap</span>(*p, *last);   <span class="hljs-comment">// 这里是选择 last 与枢轴量进行交换</span><br>            <span class="hljs-keyword">return</span> last;<br>        &#125;<br>        <span class="hljs-built_in">swap</span>(*first, *last);<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">introSort</span><span class="hljs-params">(<span class="hljs-type">int</span>* first, <span class="hljs-type">int</span>* last, <span class="hljs-type">int</span>&amp; depthLimit)</span> </span>&#123;<br>    --depthLimit;<br>    <span class="hljs-keyword">if</span> ((last - first) &gt; threshold) &#123;<br>        <span class="hljs-keyword">if</span> (depthLimit &lt;= <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-built_in">heapSort</span>(first, last);<br>            ++depthLimit;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">auto</span> cut = <span class="hljs-built_in">partition</span>(first, last);<br>        <span class="hljs-built_in">introSort</span>(first, cut, depthLimit);      <span class="hljs-comment">// 对 [first, cut) 进行排序</span><br>        <span class="hljs-built_in">introSort</span>(cut + <span class="hljs-number">1</span>, last, depthLimit);   <span class="hljs-comment">// 对 [cut + 1, last) 进行排序</span><br>    &#125;<br>    ++depthLimit;<br>&#125;<br><br><span class="hljs-comment">// 插入排序</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">insertSort</span><span class="hljs-params">(<span class="hljs-type">int</span>* first, <span class="hljs-type">const</span> <span class="hljs-type">int</span>* last)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (first == last)<br>        <span class="hljs-keyword">return</span>;<br>    <span class="hljs-type">int</span> *i, *j;<br>    <span class="hljs-type">int</span> val;<br>    <span class="hljs-keyword">for</span> (i = first + <span class="hljs-number">1</span>; i != last; ++i) &#123;<br>        val = *i;<br>        <span class="hljs-keyword">for</span> (j = i - <span class="hljs-number">1</span>; j &gt;= first &amp;&amp; val &lt; *j; --j)<br>            *(j + <span class="hljs-number">1</span>) = *j;<br>        *(j + <span class="hljs-number">1</span>) = val;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 请在这里补充你的代码, 即你所实现的 sort 函数</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">sort</span><span class="hljs-params">(<span class="hljs-type">int</span>* R, <span class="hljs-type">int</span> n)</span> </span>&#123;<br>    <span class="hljs-type">int</span> *first = R + <span class="hljs-number">1</span>, *last = R + n + <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">auto</span> depthLimit = <span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">2</span> * (<span class="hljs-built_in">log</span>(n) / <span class="hljs-built_in">log</span>(<span class="hljs-number">2</span>)));<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;depth_limit:%d\n&quot;</span>, depthLimit);<br>    <span class="hljs-comment">// 此处自加一下, 是因为, 在第一调用 introSort 时会默认递归了一次, 其实不然</span><br>    <span class="hljs-built_in">introSort</span>(first, last, ++depthLimit);<br><br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Intermediate:&quot;</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> p = first; p &lt; last; ++p)<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d &quot;</span>, *p);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n&quot;</span>);<br><br>    <span class="hljs-built_in">insertSort</span>(first, last);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="写在最后"><a class="markdownIt-Anchor" href="#写在最后"></a> 写在最后</h2>
+<p>本答案也是应 <strong>Mao-Bro</strong> 写的答案题解.<br />
+我一开始也写了个代码 (按照我之前看 <code>STL源码剖析</code> 时写的 sort, 进行了一定的简化), 但是输入输出样例都对不上, 于是搁置在一边了.<br />
+后来 <em>Mao-Bro</em> 成功的 AC 了此题, 特来向 <s>它</s> 求教后, 结合 <s>它</s> 的代码修改后, 才能 AC.<br />
+下面就来说一下我的心得体会:</p>
+<p>我感觉, 一般学校学数据也会让学生实现一个 <code>sort</code>, 估计也就是课下实现一下就可以了, 并不会放到 OJ上, 因为此函数有多种实现方式 (实现时有很多细节问题, 不同的选择, 导致排序中间状态的输出也不同), 不方便 OJ 判题.<br />
+但是, 作为 <s>酒吧舞</s> 高校, <em>Mar-Bro</em> 的老师还是选择放到 OJ 上进行评测, 因此给这个 <code>sort</code> 增加了许多限制条件, 一些写在了题目描述中, 一些则需要自己的研究. 这就导致了你看自己的思路确实没问题, 但是就是不能和样例对上的烦人的结果.<br />
+然而, 我们的 <em>Mao-Bro</em> 顶住课业压力, 终于研究出来了!<br />
+许多实现的具体细节, 我已经写在代码注释中了, 大家可以研究一下.</p>
+<p>对了, 这篇 blog 写于 2023 年劳动节补班的周日, <em>Mao-Bro</em> 正在补课 🤣. 作为 <strong>北京放假大学</strong> 的我们, 从来没有补班这种事情!</p>
+<p>😆 😆 😆</p>
+<pre class="note note-info">
+<strong>2023-04-23</strong> 
+<strong>IP属地: 北京</strong>
+</pre>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%85%B6%E4%BB%96/PAT%E9%A2%98%E8%A7%A3/" class="category-chain-item">PAT题解</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/C/">#C++</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>JLU数据结构课设 - 手撕STL Sort</div>
+      <div>https://dengwuli.github.io/2023/04/23/其他/JLU数据结构课设 - 手撕STL-Sort/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>DengWuLi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年4月23日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年4月23日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"DengWuLi/DengWuLi.github.io","repo-id":"R_kgDOI68PHQ","category":"Announcements","category-id":"DIC_kwDOI68PHc4CUEL0","theme-light":"light","theme-dark":"dark","mapping":"title","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+    <span id="sitetime"></span>
+</div>
+
+<script language=javascript>
+  function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth() + 1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2017, 9, 11, 0, 0, 0) ; //北京时间2018-2-13 00:00:00
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    var diff = t2 - t1;
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+    document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+  }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+  siteTime();
+</script>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
