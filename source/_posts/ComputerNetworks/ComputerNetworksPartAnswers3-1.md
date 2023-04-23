@@ -4,9 +4,9 @@ index_img: /img/ComputerNetworksCover.jpg
 banner_img: /img/ComputerNetworksCover.jpg
 date: 2023-04-18
 tags:
-  - Java
+  - ComputerNetworks
 category:
-  - BUPT_JAVA
+  - AnswersShare
 ---
 # Computer Networks Part Answers 3 - 1
 
