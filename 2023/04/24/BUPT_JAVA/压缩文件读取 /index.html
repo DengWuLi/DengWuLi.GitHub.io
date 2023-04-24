@@ -18,23 +18,26 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="灯无理的个人blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://dengwuli.github.io/about/index.html">
+        <meta name="description" content="压缩文件读取  题目描述: 现有一个 zip 格式的压缩文件, 文件名为 dict.dic. 它里边压缩了若干个文件 (少于20个), 没有目录. 请写一段程序将这些文件的文件名读出来.  输入: 为一个整数 $ n (0 &lt; n &lt; 20) $, 代表要输出压缩文件中第 n 个条目的文件名, 比如压缩文件共压缩了 3 个文件, 依次为 a.txt, b.txt, c.txt. 那么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BUPT JAVA: 压缩文件读取">
+<meta property="og:url" content="https://dengwuli.github.io/2023/04/24/BUPT_JAVA/%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%20/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="灯无理的个人blogs">
+<meta property="og:description" content="压缩文件读取  题目描述: 现有一个 zip 格式的压缩文件, 文件名为 dict.dic. 它里边压缩了若干个文件 (少于20个), 没有目录. 请写一段程序将这些文件的文件名读出来.  输入: 为一个整数 $ n (0 &lt; n &lt; 20) $, 代表要输出压缩文件中第 n 个条目的文件名, 比如压缩文件共压缩了 3 个文件, 依次为 a.txt, b.txt, c.txt. 那么">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-24T12:57:51.832Z">
-<meta property="article:modified_time" content="2023-04-24T12:57:51.832Z">
+<meta property="og:image" content="https://dengwuli.github.io/img/BUPT.png">
+<meta property="article:published_time" content="2023-04-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-04-24T12:57:51.828Z">
 <meta property="article:author" content="DengWuLi">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dengwuli.github.io/img/BUPT.png">
     
     
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>关于 - DengWuLi</title>
+    <title>BUPT JAVA: 压缩文件读取 - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +111,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -220,15 +223,54 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/about.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/Java.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">关于</span>
+            <span id="subtitle">BUPT JAVA: 压缩文件读取</span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-04-24 00:00" pubdate>
+          2023年4月24日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          848 字
+        
+      </span>
+    
+
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
 
         
       </div>
@@ -244,61 +286,212 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/%E5%A4%B4%E5%83%8F.jpg" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">Deng</div>
-    <div class="about-intro">欢迎来到 Deng 的私人博客 <br> 欢迎与我交流想法</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://github.com/DengWuLi class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">BUPT JAVA: 压缩文件读取</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="压缩文件读取"><a class="markdownIt-Anchor" href="#压缩文件读取"></a> 压缩文件读取</h1>
+<h2 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述:</h2>
+<p>现有一个 zip 格式的压缩文件, 文件名为 <code>dict.dic</code>. 它里边压缩了若干个文件 (少于20个), 没有目录.<br />
+请写一段程序将这些文件的文件名读出来.</p>
+<h2 id="输入"><a class="markdownIt-Anchor" href="#输入"></a> 输入:</h2>
+<p>为一个整数 $ n (0 &lt; n &lt; 20) $, 代表要输出压缩文件中第 n 个条目的文件名, 比如压缩文件共压缩了 3 个文件, 依次为 a.txt, b.txt, c.txt. 那么当输入为 1 时输出 a.txt, 输入为 2 时输出 b.txt, 输入为 3 时输出 c.txt.<br />
+测试用例保证输入合法.</p>
+<h2 id="输出"><a class="markdownIt-Anchor" href="#输出"></a> 输出:</h2>
+<p>只有一行字符串, 为对应的文件名</p>
+<h2 id="输入样例"><a class="markdownIt-Anchor" href="#输入样例"></a> 输入样例:</h2>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">1<br></code></pre></td></tr></table></figure>
+<h2 id="输出样例"><a class="markdownIt-Anchor" href="#输出样例"></a> 输出样例:</h2>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">a.txt<br></code></pre></td></tr></table></figure>
+<h2 id="java"><a class="markdownIt-Anchor" href="#java"></a> Java</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 2023/04/24</span><br><span class="hljs-comment">// 压缩文件读取</span><br><br><span class="hljs-keyword">import</span> java.io.*;<br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-keyword">import</span> java.util.zip.ZipEntry;<br><span class="hljs-keyword">import</span> java.util.zip.ZipInputStream;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Main</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>        <span class="hljs-type">var</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">var</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> in.nextInt();<br>        <span class="hljs-type">var</span> <span class="hljs-variable">file</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ZipInputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedInputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(<span class="hljs-string">&quot;dict.dic&quot;</span>)));<br>        <span class="hljs-type">var</span> <span class="hljs-variable">names</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;String&gt;();<br>        ZipEntry zipEntry;<br>        <span class="hljs-keyword">while</span> ((zipEntry = file.getNextEntry()) != <span class="hljs-literal">null</span>)<br>            names.add(zipEntry.getName());<br>        System.out.println(names.get(n - <span class="hljs-number">1</span>));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class="note note-info">
+<strong>2023-04-24</strong> 
+<strong>IP属地: 北京</strong>
+</pre>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
       
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
         
-        
-        
-        <a href=mailto:dengwuli2023@gmail.com class="
-           hint--bottom hint--rounded"
-           aria-label=Email
-           target="_blank"
-        >
-          <i class="iconfont icon-mail" aria-hidden="true"></i>
-          
-        </a>
+  <a href="/categories/BUPT-JAVA/" class="category-chain-item">BUPT_JAVA</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/Java/">#Java</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>BUPT JAVA: 压缩文件读取</div>
+      <div>https://dengwuli.github.io/2023/04/24/BUPT_JAVA/压缩文件读取 /</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>DengWuLi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年4月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年4月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"DengWuLi/DengWuLi.github.io","repo-id":"R_kgDOI68PHQ","category":"Announcements","category-id":"DIC_kwDOI68PHc4CUEL0","theme-light":"light","theme-dark":"dark","mapping":"title","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    
-  </div>
-
-  
-</article>
-
 
 
 
@@ -331,11 +524,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -444,6 +634,46 @@
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
   <script>Fluid.plugins.codeWidget();</script>
@@ -541,6 +771,8 @@
   <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
