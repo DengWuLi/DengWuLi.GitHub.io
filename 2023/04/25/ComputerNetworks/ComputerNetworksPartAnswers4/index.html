@@ -18,16 +18,16 @@
     <meta name="author" content="DengWuLi">
     <meta name="keywords" content="">
     
-        <meta name="description" content="Computer Networks Part Answers 4 - 1  1. What is the length of a contention slot in CSMA&#x2F;CD for  (a) a 2-km twin-lead cable (signal propagation speed is 82% of the signal propagation speed in vacuum)">
+        <meta name="description" content="Computer Networks Part Answers 4  1. What is the length of a contention slot in CSMA&#x2F;CD for  (a) a 2-km twin-lead cable (signal propagation speed is 82% of the signal propagation speed in vacuum)?  (">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Computer Networks Part Answers 4 - 1">
-<meta property="og:url" content="https://dengwuli.github.io/2023/04/25/ComputerNetworks/ComputerNetworksPartAnswers4-1/index.html">
+<meta property="og:title" content="Computer Networks Part Answers 4">
+<meta property="og:url" content="https://dengwuli.github.io/2023/04/25/ComputerNetworks/ComputerNetworksPartAnswers4/index.html">
 <meta property="og:site_name" content="DengWuLi">
-<meta property="og:description" content="Computer Networks Part Answers 4 - 1  1. What is the length of a contention slot in CSMA&#x2F;CD for  (a) a 2-km twin-lead cable (signal propagation speed is 82% of the signal propagation speed in vacuum)">
+<meta property="og:description" content="Computer Networks Part Answers 4  1. What is the length of a contention slot in CSMA&#x2F;CD for  (a) a 2-km twin-lead cable (signal propagation speed is 82% of the signal propagation speed in vacuum)?  (">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
 <meta property="article:published_time" content="2023-04-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-23T00:42:19.709Z">
+<meta property="article:modified_time" content="2023-06-16T03:47:56.771Z">
 <meta property="article:author" content="DengWuLi">
 <meta property="article:tag" content="ComputerNetworks">
 <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
         <meta name="referrer" content="no-referrer-when-downgrade">
     
     
-    <title>Computer Networks Part Answers 4 - 1 - DengWuLi</title>
+    <title>Computer Networks Part Answers 4 - DengWuLi</title>
 
     <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -229,7 +229,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Computer Networks Part Answers 4 - 1</span>
+            <span id="subtitle">Computer Networks Part Answers 4</span>
           
         </div>
 
@@ -300,12 +300,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Computer Networks Part Answers 4 - 1</h1>
+            <h1 style="display: none">Computer Networks Part Answers 4</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="computer-networks-part-answers-4-1"><a class="markdownIt-Anchor" href="#computer-networks-part-answers-4-1"></a> Computer Networks Part Answers 4 - 1</h1>
+                <h1 id="computer-networks-part-answers-4"><a class="markdownIt-Anchor" href="#computer-networks-part-answers-4"></a> Computer Networks Part Answers 4</h1>
 <font face = "Times New Roman" size = 4>
 <b>1.</b> What is the length of a contention slot in CSMA/CD for <br>
 (a) a 2-km twin-lead cable (signal propagation speed is 82% of the signal propagation speed in vacuum)? <br>
@@ -1055,6 +1055,7 @@ Hint: the fact that it is gigabit Ethernet matters.
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs txt">     +-----+                 +-----------------------------------------+<br>A:   | RTS |                 |                   Data                  |<br>  ---+-----+-----------------+-----------------------------------------+---------------------------<br>           .<br>           .   +-----+                                                         +-----+<br>B:         .   | CTS |                                                         | ACK |<br>  ---------.---+-----+---------------------------------------------------------+-----+-------------<br>           .         .                                                               .<br>           +---------.---------------------------------------------------------------+<br>C:         |         .                         NAV                                   |<br>  ---------+---------.---------------------------------------------------------------+-------------<br>                     .                                                               .<br>                     +---------------------------------------------------------------+<br>D:                   |                            NAV                                | <br>  -----------------------------------------------------------------------------------+-------------<br><br>                                            Time   ------&gt;<br></code></pre></td></tr></table></figure>
 <p>站点 C 离 A 更近<br />
 因为 C 能收到 A 的 RTS 帧, 并且通过 NAV (网络分配向量) 做出相应. D 的 NAV 不包括 RTS 的时间, 说明 D 没有收到 RTS 帧, 即 D 位于 A 的无线信号覆盖范围之外.</p>
+<p><strong>注意: 最后一句的中文翻译应为: 你认为后两个站点中哪一个最接近 A 并解释原因. 而不是哪两个站点最接近 A</strong></p>
 <font face = "Times New Roman" size = 4>
 <b>11.</b> Give an example to show that the RTS/CTS in the 802.11 protocol is a little different than in the MACA protocol.
 </font>
@@ -1176,8 +1177,8 @@ List all ports on which a packet will be forwarded for the following sequence of
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Computer Networks Part Answers 4 - 1</div>
-      <div>https://dengwuli.github.io/2023/04/25/ComputerNetworks/ComputerNetworksPartAnswers4-1/</div>
+      <div>Computer Networks Part Answers 4</div>
+      <div>https://dengwuli.github.io/2023/04/25/ComputerNetworks/ComputerNetworksPartAnswers4/</div>
     </div>
     <div class="license-meta">
       
@@ -1195,7 +1196,7 @@ List all ports on which a packet will be forwarded for the following sequence of
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年5月23日</div>
+          <div>2023年6月16日</div>
         </div>
       
       

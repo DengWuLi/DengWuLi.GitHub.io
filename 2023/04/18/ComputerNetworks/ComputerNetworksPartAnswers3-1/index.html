@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dengwuli.github.io/img/ComputerNetworksCover.jpg">
 <meta property="article:published_time" content="2023-04-18T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-23T00:42:19.709Z">
+<meta property="article:modified_time" content="2023-06-16T03:47:56.771Z">
 <meta property="article:author" content="DengWuLi">
 <meta property="article:tag" content="ComputerNetworks">
 <meta name="twitter:card" content="summary_large_image">
@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.4k 字
+          3.9k 字
         
       </span>
     
@@ -316,6 +316,21 @@ If no error control is done by the data link protocol, how many times must the m
 三次发送成功的概率为 $ (1 - 0.107)^{2} \times 0.107 $<br />
 由此类推 $ k $ 次发送成功的概率为: $ (1 - 0.107)^{k} \times 0.107 $<br />
 发送次数的平均值 $ = \sum_{k = 1}^{\infty} {k \times (1 - 0.107)^{k} \times 0.107} = \frac{1}{0.107} \approx 9 $</p>
+<blockquote>
+<p>以下内容(公式的推导)更新于 2023-06-15</p>
+</blockquote>
+<p>下面给出一个 $ \sum^{\infty}_{i = 1} i(1 - p)^{i- 1}p $ 这个级数的求和过程:</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align* at position 7: \begin{̲a̲l̲i̲g̲n̲*̲}̲
+&amp;\sum^{\infty}…'>\begin{align*}
+&amp;\sum^{\infty}_{i = 1} i(1 - p)^{i- 1}p \\[0.1cm]
+&amp;= p \cdot \sum^{\infty}_{i = 1} i(1 - p)^{i- 1} \\[0.1cm]
+&amp;= p \cdot [\sum^{\infty}_{i = 1} i(1 - p)^{i- 1}]^{\prime} \\[0.1cm]
+&amp;= p \cdot [\frac{(1 - p) - (1 - p)^{\infty}}{1 - (1 - p)}]^{\prime} \\[0.1cm]
+&amp;= p \cdot (\frac{1 - p}{p})^{\prime} \\[0.1cm]
+&amp;= - \frac{1}{p}
+\end{align*}
+</p>
+<p>值得注意的一点是, 最后推导出的结果多了一个负号, 但是以我目前的能力并不能解决这一点, 希望看到这篇文章的有缘人能够在评论区留下正确的解决办法, 鄙人不胜感激.</p>
 <br>
 <font face = "Times New Roman" size = 4>
 <b>2.</b> The following data fragment occurs in the middle of a data stream for which the bytestuffing algorithm described in the text is used: <br>
@@ -331,11 +346,15 @@ What is the output after stuffing?
 an error-detecting coding scheme uses one parity bit for checking all the odd-numbered bits and a second parity bit for all the even-numbered bits. 
 What is the Hamming distance of this code?
 </font>
-<p>无论是发生在奇数位上的单比特错误, 还是偶数位上的单比特错误都可以被检测出来, 但是两个比特的错误不能被检测出来, 所以这种编码的汉明距离为2.</p>
+<p>无论是发生在奇数位上的单比特错误, 还是偶数位上的单比特错误都可以被检测出来, 但是两个比特的错误不能被检测出来, 所以这种编码的汉明距离为 2.</p>
 <font face = "Times New Roman" size = 4>
 <b>4.</b> An 8-bit byte with binary value 10101111 is to be encoded using an even-parity Hamming code. What is the binary value after encoding?
 </font>
 <p>这个题目很基础, 过程不予展示, 直接给出答案: $ 1010 0100 1111 $</p>
+<blockquote>
+<p>以下内容(海明编码解码-简便法)更新于 2023-06-15. 这里插入图片有些问题, 大家可以本博客的<a target="_blank" rel="noopener" href="https://github.com/DengWuLi/DengWuLi.github.io/tree/hexo/source/_posts/ComputerNetworks/img/%E6%B5%B7%E6%98%8E%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81-%E7%AE%80%E4%BE%BF%E6%B3%95.png">仓库</a> 查到本图片.</p>
+</blockquote>
+<img alt="海明编码解码-简便法" src="./img/海明编码解码-简便法.png" srcset="/img/loading.gif" lazyload/>
 <br>
 <font face = "Times New Roman" size = 4>
 <b>5.</b> One way of detecting errors is to transmit data as a block of <i> n </i> rows of <i> k </i> bits per row and add parity bits to each row and each column. 
@@ -343,7 +362,7 @@ The bitin the lower-right corner is a parity bit that checks its row and its col
 Will this scheme detect all single errors? Double errors? Triple errors? Show that this scheme cannot detect some four-bit errors.
 </font>
 <p>这种方法可以检查出所有单比特差错, 一个单比特差错将导致其所在的行和列都出现校验错误. 也可以检查出所有双比特差错, 即使出错的两个比特在同一行或者同一列, 也能查出.<br />
-但是, 对于3比特差错, 如果一个数据位错, 其对应的行列校验位均错, 则无法检测出差错. 对于4比特差错, 如果出错的四个点正好位于矩形的4个顶点, 则无法检查出差错.</p>
+但是, 对于 3 比特差错, 如果一个数据位错, 其对应的行列校验位均错, 则无法检测出差错. 对于 4 比特差错, 如果出错的四个点正好位于矩形的 4 个顶点, 则无法检查出差错.</p>
 <br>
 <font face = "Times New Roman" size = 4>
 <b>6.</b> Suppose that data are transmitted in blocks of sizes 1000 bits. 
@@ -352,9 +371,9 @@ Assume that bit errors are independent of one another and no bit error occurs du
 </font>
 <p>根据不等式: $ m + r + 1 \leq 2^r $<br />
 可以算出 1000 位数据, 汉明码需要 10 位校验位, 即一共传输 1010 位;<br />
-而采用奇偶校验并重传的方法, 需要 1 位校验位, 出错时重传1001 位.<br />
+而采用奇偶校验并重传的方法, 需要 1 位校验位, 出错时重传 1001 位.<br />
 假设每位出错的概率为 $ p $, 采用检错重传一共传输 $ 1001 + 1000p \times 1001 $ 位</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1001</mn><mo>+</mo><mn>1000</mn><mi>p</mi><mo>×</mo><mn>1001</mn><mo>&lt;</mo><mn>1010</mn><mo>⟹</mo><mi>p</mi><mo>&lt;</mo><mn>8.99</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1001 + 1000p \times 1001  &lt; 1010 \Longrightarrow  p &lt; 8.99 \times 10^{-6} 
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1001</mn><mo>+</mo><mn>1000</mn><mi>p</mi><mo>×</mo><mn>1001</mn><mo>&lt;</mo><mn>1010</mn><mo>⟹</mo><mi>p</mi><mo>&lt;</mo><mn>8.99</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1001 + 1000p \times 1001 &lt; 1010 \Longrightarrow p &lt; 8.99 \times 10^{-6} 
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68354em;vertical-align:-0.0391em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66844em;vertical-align:-0.024em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">8</span><span class="mord">.</span><span class="mord">9</span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.864108em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
 <font face = "Times New Roman" size = 4>
 <b>7.</b> What is the remainder obtained by dividing $ x^7 + x^5 + 1 $ by the generator polynomial $ x^3 + 1 $?
@@ -368,11 +387,11 @@ The generator polynomial is $ x^3 + 1 $. Show the actual bit string transmitted.
 Show that this error is detected at the receiver’s end. Give an example of bit errors in the bit string transmitted that will not be detected by the receiver.
 </font>
 <p>生成多项式的最高阶为 3, 因此先在待校验的串之后增加 3 个 0, 即 $ 1001 1101 000 $<br />
-然后以此位串为被除数, 生成多项式的位串 ($ 1001 $)为除数采用模2除法进行计算,求出余数为 $ 100 $.<br />
+然后以此位串为被除数, 生成多项式的位串 ($ 1001 $)为除数采用模 2 除法进行计算,求出余数为 $ 100 $.<br />
 实际传输位串为: $ 1001 1101 100 $<br />
 第三位反转之后的出错位串为: $ 1011 1101 100 $<br />
-因为: $ 10111101 100 \; mod \; 1001 = 100 \neq 0 $ 说明该位串有错, 因此可以检测出错误.</p>
-<p>如果发生在左数第三位与第九位均发生了反转错误,即收到的位串为 $ 1011 1101 000 $, 此时校验的结果为0, 即接收方无法检测出错误.</p>
+因为: $ 10111101 100 \ mod \ 1001 = 100 \neq 0 $ 说明该位串有错, 因此可以检测出错误.</p>
+<p>如果发生在左数第三位与第九位均发生了反转错误,即收到的位串为 $ 1011 1101 000 $, 此时校验的结果为 0, 即接收方无法检测出错误.</p>
 <font face = "Times New Roman" size = 4>
 <b>9.</b> Data link protocols almost always put the CRC in a trailer rather than in a header. Why?
 </font>
@@ -390,6 +409,7 @@ Is it possible that a receiver may accept multiple copies of the same frame when
 <strong>2023-04-18</strong> 
 <strong>IP属地: 北京</strong>
 </pre>
+
                 
               </div>
             
@@ -453,7 +473,7 @@ Is it possible that a receiver may accept multiple copies of the same frame when
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年5月23日</div>
+          <div>2023年6月16日</div>
         </div>
       
       
