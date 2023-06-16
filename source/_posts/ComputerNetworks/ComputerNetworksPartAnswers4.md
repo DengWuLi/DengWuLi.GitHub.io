@@ -1,5 +1,5 @@
 ---
-title: 'Computer Networks Part Answers 4 - 1'
+title: 'Computer Networks Part Answers 4'
 index_img: /img/ComputerNetworksCover.jpg
 banner_img: /img/ComputerNetworksCover.jpg
 date: 2023-04-25
@@ -10,7 +10,7 @@ category:
 mermaid: true
 ---
 
-# Computer Networks Part Answers 4 - 1
+# Computer Networks Part Answers 4
 
 <font face = "Times New Roman" size = 4>
 <b>1.</b> What is the length of a contention slot in CSMA/CD for <br>
@@ -820,6 +820,8 @@ D:                   |                            NAV                           
 
 站点 C 离 A 更近
 因为 C 能收到 A 的 RTS 帧, 并且通过 NAV (网络分配向量) 做出相应. D 的 NAV 不包括 RTS 的时间, 说明 D 没有收到 RTS 帧, 即 D 位于 A 的无线信号覆盖范围之外.
+
+**注意: 最后一句的中文翻译应为: 你认为后两个站点中哪一个最接近 A 并解释原因. 而不是哪两个站点最接近 A**
 
 <font face = "Times New Roman" size = 4>
 <b>11.</b> Give an example to show that the RTS/CTS in the 802.11 protocol is a little different than in the MACA protocol.
